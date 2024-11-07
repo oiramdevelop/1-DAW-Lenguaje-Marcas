@@ -25,12 +25,12 @@
                 <li>
                     Introduccion a XML
                 </li>
-            <li id="toggleText" style="cursor: pointer; color: rgb(14, 14, 20); text-decoration: underline;">
+            <li>
                 Ejercicios XML
                 
             </li>
             <h4>Tema 2 Introduccion al HTML</h4>
-            <div id="menu">
+            <div >
                 <ul>
                     <li>Ejercicio1</li>
                     <li>Ejercicio2</li>
@@ -40,32 +40,45 @@
                 </ul>
             </div>
         </ul>
+        <p id="toggle-text" style="cursor: pointer; color: blue; text-decoration: underline;">
+            Haz clic aquí para abrir el menú
+        </p>
+    
+        <div id="menu">
+            <ul>
+                <li src="T2 HTML\horario\ejercicioTabla.html">Opción 1 </li>
+                <li>Opción 2</li>
+                <li>Opción 3</li>
+            </ul>
+        </div>
+    
+        <script>
+            // Obtener los elementos del DOM
+            const toggleText = document.getElementById('toggle-text');
+            const menu = document.getElementById('menu');
+    
+            // Añadir evento de clic al texto
+            toggleText.addEventListener('click', () => {
+                // Alternar entre mostrar y ocultar el menú
+                if (menu.style.display === 'none' || menu.style.display === '') {
+                    menu.style.display = 'block'; // Mostrar el menú
+                } else {
+                    menu.style.display = 'none'; // Ocultar el menú
+                }
+            });
+    
+            // Cerrar el menú si se hace clic fuera de él
+            document.addEventListener('click', (event) => {
+                if (!menu.contains(event.target) && event.target !== toggleText) {
+                    menu.style.display = 'none'; // Ocultar el menú
+                }
+            });
+        </script>
 
     </div>
     
 
-       <script>
-             
-        const toggleText = document.getElementById('toggle-text');
-        const menu = document.getElementById('menu');
-
-   
-        toggleText.addEventListener('click', () => {
-            // Alternar entre mostrar y ocultar el menú
-            if (menu.style.display === 'none' || menu.style.display === '') {
-                menu.style.display = 'block'; // Mostrar el menú
-            } else {
-                menu.style.display = 'none'; // Ocultar el menú
-            }
-        });
-
-        // Cerrar el menú si se hace clic fuera de él
-        document.addEventListener('click', (event) => {
-            if (!menu.contains(event.target) && event.target !== toggleText) {
-                menu.style.display = 'none'; // Ocultar el menú
-            }
-        });
-       </script>
+       
     
     
     
