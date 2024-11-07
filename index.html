@@ -4,16 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="estiloindex.css">
 </head>
-<body>
+<body style="background-color: rgb(192, 173, 133)">
     <style>
-    
+   
     </style>
-    <div align ="center">
-        <h3>Mario Rodríguez Díaz</h3>
+    
+    <div align="center" class="div1">
+        <table class="tablaindex" border="4">
+            <th>
+                <h2>Mario Rodriguez Díaz</h3>
+            </th>
+        </table>
 
     </div>
-       
+    <div class="div2">
+        <ul>
+            <h4>Tema 1. Introduccion a los Lenguajes de Marcas</h2>
+                <li>
+                    Introduccion a XML
+                </li>
+            <li id="texto">
+                Ejercicios XML
+                <div id="menu">
+                    <ul>
+                        <li>Ejercicio1</li>
+                        <li>Ejercicio2</li>
+                        <li>Ejercicio3</li>
+                        <li>Ejercicio4</li>
+                        <li>Ejercicio5</li>
+                    </ul>
+                </div>
+            </li>
+            <h4>Tema 2 Introduccion al HTML</h4>
+            
+        </ul>
+
+    </div>
+
+       <script>
+             
+        const toggleText = document.getElementById('toggle-text');
+        const menu = document.getElementById('menu');
+
+   
+        toggleText.addEventListener('click', () => {
+            // Alternar entre mostrar y ocultar el menú
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block'; // Mostrar el menú
+            } else {
+                menu.style.display = 'none'; // Ocultar el menú
+            }
+        });
+
+        // Cerrar el menú si se hace clic fuera de él
+        document.addEventListener('click', (event) => {
+            if (!menu.contains(event.target) && event.target !== toggleText) {
+                menu.style.display = 'none'; // Ocultar el menú
+            }
+        });
+       </script>
     
     
     

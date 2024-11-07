@@ -1,0 +1,39 @@
+.div1{
+    padding-top: 5%;
+    text-shadow: 10cap;
+}
+.div2{
+    padding: left 1px%;
+    
+}
+.tablaindex{
+    font-size: 18px;
+            padding-left: 1px;
+            padding-top: 1px;
+            padding-right: 1px;
+            padding-bottom: 1px;
+            border-radius: 10px;
+             border-color: rgb(255, 174, 0);
+            background-color: rgb(4, 180, 180);
+}
+#menu {
+    display: none; /* Ocultamos el menú inicialmente */
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    position: absolute; /* Para que aparezca en posición relativa al texto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+#menu li:hover {
+    background-color: #ddd;
+}
