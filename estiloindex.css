@@ -1,6 +1,3 @@
-body{
-    background: linear-gradient(to right, #b1b3b2, #29ec01);
-}
 .sidebar {
 	height: 100%; /* Altura completa */
 	width: 160px; /* Ancho de la barra lateral */
@@ -14,7 +11,7 @@ body{
   }
   
   /* Estilo para los enlaces de la barra lateral */
-  .sidebar a {
+.sidebar a::content{
 	padding: 6px 8px 6px 16px;
 	text-decoration: none;
 	font-size: 20px;
@@ -23,25 +20,26 @@ body{
   }
   
   
-  .sidebar a:hover {
+.sidebar a:hover {
 	color: #472183;
   }
   
   /* Estilo para el contenido principal */
-  .main {
+.main {
 	margin-left: 160px; /* Agregar un margen izquierdo para que el contenido no se superponga con la barra lateral */
 	padding: 0px 10px;
   }
   
   /* Estilo para el botón de la barra lateral */
-  .openbtn {
-	font-size: 10px;
+.openbtn {
+	font-size: 20px;
 	cursor: pointer;
-	
+	background-color: white;
 	color: black;
 	padding: 10px 15px;
 	border: none;
   }
-  .closebtn{
-    padding-left: 10%;
-  }
+
+
+
+
