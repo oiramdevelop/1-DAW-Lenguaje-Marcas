@@ -1,3 +1,6 @@
+body{
+    background: linear-gradient(to right rgb(199, 24, 32) rgb(224, 220, 220));
+  }
 .sidebar {
 	height: 100%; /* Altura completa */
 	width: 160px; /* Ancho de la barra lateral */
