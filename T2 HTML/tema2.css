@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(to right rgb(199, 24, 32) rgb(224, 220, 220));
+    background: linear-gradient(to right, rgb(199, 24, 32), rgb(224, 220, 220));
   }
 .sidebar {
 	height: 100%; /* Altura completa */
@@ -18,13 +18,13 @@ body{
 	padding: 6px 8px 6px 16px;
 	text-decoration: none;
 	font-size: 20px;
-	color: white ;
+	color: rgb(226, 217, 217) ;
 	display: block;
   }
   
   
   .sidebar a:hover {
-	color: #472183;
+	color: #cc0d1d;
   }
   
 
@@ -37,7 +37,7 @@ body{
   .openbtn {
 	font-size: 20px;
 	cursor: pointer;
-	background-color: white;
+	background: linear-gradient(to right, rgb(199, 24, 32), rgb(224, 220, 220));
 	color: black;
 	padding: 10px 15px;
 	border: none;

@@ -1,48 +1,43 @@
-body{
-  background: linear-gradient(to right rgb(199, 24, 32) rgb(224, 220, 220));
+body {
+    background: linear-gradient(to right, rgb(218, 17, 27), rgb(119, 116, 116));
 }
+
 .sidebar {
-	height: 100%; /* Altura completa */
-	width: 160px; /* Ancho de la barra lateral */
-	position: fixed; /* Hacer que la barra lateral sea fija */
-	z-index: 1; /* Colocar la barra lateral en la parte superior */
-	top: 0; /* Posicionar la barra lateral en la parte superior */
-	left: 0; /* Posicionar la barra lateral en el lado izquierdo */
-	background-color: #111; /* Color de fondo de la barra lateral */
-	overflow-x: hidden; /* Deshabilitar el desplazamiento horizontal */
-	padding-top: 20px; /* Agregar espacio superior */
-  }
-  
- 
-  .sidebar a {
-	padding: 6px 8px 6px 16px;
-	text-decoration: none;
-	font-size: 20px;
-	color: white ;
-	display: block;
-  }
-  
-  
-  .sidebar a:hover {
-	color: #472183;
-  }
-  
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
 
-  .main {
-	margin-left: 160px; 
-	padding: 0px 10px;
-  }
-  
+.sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+}
 
-  .openbtn {
-	font-size: 20px;
-	cursor: pointer;
-	background-color: white;
-	color: black;
-	padding: 10px 15px;
-	border: none;
-  }
+.sidebar a:hover {
+    color: #472183;
+}
 
+.main {
+    margin-left: 160px;
+    padding: 0px 10px;
+}
 
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+}
 
 
