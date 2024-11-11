@@ -23,7 +23,7 @@ body {
 }
 
 .sidebar a:hover {
-    color: #472183;
+    color:  #cc0d1d;
 }
 
 .main {
@@ -34,10 +34,17 @@ body {
 .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: white;
+	background: linear-gradient(to right, rgb(218, 17, 27), rgb(119, 116, 116));
     color: black;
     padding: 10px 15px;
     border: none;
 }
-
-
+.nombre{
+	font-size: 100px;
+	width: 800px;
+	font-family:Georgia, 'Times New Roman', Times, serif
+}
+img{
+	padding-left: 40%;
+	
+}
