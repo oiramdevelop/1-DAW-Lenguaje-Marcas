@@ -1,0 +1,107 @@
+body {
+    background: linear-gradient(to right, rgb(218, 17, 27), rgb(119, 116, 116));
+}
+
+.sidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+}
+
+.sidebar a:hover {
+    color:  #cc0d1d;
+}
+
+.main {
+    margin-left: 160px;
+    padding: 0px 10px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+	background: linear-gradient(to right, rgb(218, 17, 27), rgb(119, 116, 116));
+    color: black;
+    padding: 10px 15px;
+    border: none;
+}
+.nombre{
+	font-size: 100px;
+	width: 800px;
+	font-family:Georgia, 'Times New Roman', Times, serif
+}
+img{
+	padding-left: 40%;
+	
+}
+h1{
+            
+    background-color: aqua;
+    text-align: center;
+
+}
+table{
+    font-size: 18px;
+    border-radius: 11px;
+    border-color: black;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+    border-color: brown;
+    background-color: blue;
+    
+}
+.fila1{
+    font-size: 15px;
+    background-color: coral;
+}
+.Endes{
+    background-color: aquamarine;
+}
+.ingles{
+    background-color: blueviolet;
+}
+.lm{
+    background-color: brown;
+}
+.horas{
+    font-size: 15px;
+    background-color: deeppink;
+}
+.sosten{
+    background-color: cadetblue;
+}
+.program{
+    background-color: color-mix(in srgb, red 40%, blueviolet 50%);
+}
+.badat{
+    background-color: darkolivegreen;
+}
+.IPE{
+    background-color: hotpink;
+}
+.sistemas{
+    background-color: gold;
+}
+.Digita{
+    background-color: blanchedalmond;
+}
+h3{
+    background-color: aqua;
+    padding-left: 20%;
+}
