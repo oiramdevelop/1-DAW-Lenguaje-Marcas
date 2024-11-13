@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="ejercicioTabla.css">
     <title>U2 horario </title>
 </head>
-<body style="background-image: url('iesmardecadiz.jpg');background-size: cover;">
-   
-    
+<body >
+   <!-- Botón para abrir la barra lateral -->
+    <button class="openbtn" onclick="openNav()">☰</button>
     <h1> Horario 1º DAW </h1>
     <table border="2" align="center">
         <tr class="fila1">
@@ -111,7 +111,35 @@
         SASP = Sostenibilidad Aplicada 
         <br>
         <br>
+        <!-- Botón para abrir la barra lateral -->
+   
 
+    
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="../index.html">Inicio</a>
+        <a href="">Tema 1 introduccion a los lenguajes de marcas</a>
+        <a href="../T2 HTML\tema2.html">Tema 2 Introduccion al HTML</a>
+       
+    </div>
+
+    
+    
+
+
+    <script>
+        // Función para abrir la barra lateral
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "160px";
+            document.getElementById("main").style.marginLeft = "160px";
+        }
+
+        // Función para cerrar la barra lateral
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
     </h3>
 </body>
 </html>

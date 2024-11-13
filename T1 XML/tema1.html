@@ -4,30 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="estiloindex.css">
-
-    
+    <link rel="stylesheet" href="tema1.css">
 </head>
 <body>
-    <!-- Botón para abrir la barra lateral -->
     <button class="openbtn" onclick="openNav()">☰</button>
-
-    
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="index.html">Inicio</a>
-        <a href="T1 XML\tema1.html">Tema 1 introduccion a los lenguajes de marcas</a>
-        <a href="T2 HTML\tema2.html">Tema 2 Introduccion al HTML</a>
-       
+        <a href="../index.html">Inicio</a>
+        <a href="tema1.html">Tema 1 introduccion a los lenguajes de marcas</a>
+        <a href="../T2 HTML\tema2.html">Tema 2 Introduccion al HTML</a>
+        
     </div>
 
     
-    <div id="main" align="center">
-        <a class="nombre">Mario Rodríguez Díaz</a>
-        <p>Haz clic en el menú y encontraras todo los trabajos realizados por diferentes lenguajes de marcas</p>
+    <div id="main" align="center" >
+        <h1>EJERCICIO TEMA 2</h1>
+        <p>PINCHE EN ALGUNOS DE LOS DOS EJERCICIOS PARA VERLOS</p>
     </div>
-
-
     <script>
         // Función para abrir la barra lateral
         function openNav() {
@@ -41,6 +34,12 @@
             document.getElementById("main").style.marginLeft = "0";
         }
     </script>
-    <img src="logo.png"></img>
+
+    <div align="center">
+        <div class="cuadro" align="center">
+            <span>EJERCICIO 1 XML</span>
+            <span><a href="../T2 HTML\ejercicioTabla.html">   EJERCICIO 2 HTML (HORARIO) </a></span>
+        </div>
+    </div>
 </body>
 </html>
