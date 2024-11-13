@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="examenUnidad1.css" type="text/css"?>
+    <empresa>
+        <empleados>
+            <empleado1>
+                <nombre>Ana</nombre>
+                <apellido>García</apellido>
+                <edad>30</edad>
+                <departamento>
+                    <nombre_departamento>Ventas</nombre_departamento>
+                    <codigo>001</codigo>
+                </departamento>
+                <cargo>Ejecutivo de ventas</cargo>
+            </empleado1>
+            <empleado2>
+                <nombre>Luis</nombre>
+                <apellido>Rodríguez</apellido>
+                <edad>45</edad>
+                <departamento>
+                    <nombre_departamento>Finanzas</nombre_departamento>
+                    <codigo>002</codigo>
+                </departamento>
+                <cargo>Analista financiero</cargo>
+            </empleado2>
+            <empleado3>
+                <nombre>María</nombre>
+                <apellido>Lopez</apellido>
+                <edad>28</edad>
+                <departamento>
+                    <nombre_departamento>Marketing</nombre_departamento>
+                    <codigo>003</codigo>
+                </departamento>
+                <cargo>Especialista en redes sociales</cargo>
+            </empleado3>
+
+        </empleados>
+       
+    </empresa>

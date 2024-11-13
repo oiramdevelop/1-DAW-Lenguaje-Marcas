@@ -39,7 +39,7 @@ body{
   .openbtn {
 	font-size: 20px;
 	cursor: pointer;
-	background: linear-gradient(to right, rgb(199, 24, 32), rgb(224, 220, 220));
+	background-color: rgb(199, 24, 32);
 	color: black;
 	padding: 10px 15px;
 	border: none;
@@ -77,4 +77,9 @@ body{
 a{
 	color: aliceblue;
 	font-family: 'Times New Roman', Times, serif;
+}
+.titulo2{
+	font-size: 70px;
+	
+	font-family:Georgia, 'Times New Roman', Times, serif
 }
