@@ -84,5 +84,10 @@ a{
 	font-family:Georgia, 'Times New Roman', Times, serif
 }
 .formulario{
-    background: linear-gradient(to right, rgb(199, 24, 32), rgb(224, 220, 220));
+    background: linear-gradient(to right, rgb(199, 24, 32), rgb(192, 186, 186));
+}
+.formText{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color: black;
+	font-weight: bold;
 }
