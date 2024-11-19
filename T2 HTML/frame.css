@@ -1,0 +1,88 @@
+body{
+    background: linear-gradient(to right, rgb(199, 24, 32), rgb(224, 220, 220));
+  }
+.sidebar {
+	height: 100%; /* Altura completa */
+	width: 160px; /* Ancho de la barra lateral */
+	position: fixed; /* Hacer que la barra lateral sea fija */
+	z-index: 1; /* Colocar la barra lateral en la parte superior */
+	top: 0; /* Posicionar la barra lateral en la parte superior */
+	left: 0; /* Posicionar la barra lateral en el lado izquierdo */
+	background-color: #111; /* Color de fondo de la barra lateral */
+	overflow-x: hidden; /* Deshabilitar el desplazamiento horizontal */
+	padding-top: 20px; /* Agregar espacio superior */
+  }
+  
+ 
+  .sidebar a {
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 20px;
+	color: rgb(226, 217, 217) ;
+	display: block;
+  }
+  
+  
+  .sidebar a:hover {
+	color: #cc0d1d;
+  }
+  
+
+  .main {
+	margin-left: 160px; 
+	padding: 0px 10px;
+	width: 200px;
+	font-family: 'Times New Roman', Times, serif;
+  }
+  
+
+  .openbtn {
+	font-size: 20px;
+	cursor: pointer;
+	background-color: rgb(199, 24, 32);
+	color: black;
+	padding: 10px 15px;
+	border: none;
+  }
+  .cuadro {
+	width: 430px;
+	padding-left: 3%;
+	padding-right: 3%;
+	height: 430px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-items: center;
+	border: 4px solid transparent;
+	border-radius: 10px;
+	animation: movimiento 20s infinite linear, rgbGlow 3s infinite;
+	background-color: black;
+  }
+ 
+  .cuadro span {
+	font-size: 2em;
+	font-weight: bold;
+	color: white;
+	animation: colorShift 3s infinite;
+  }
+ 
+
+  /* Efecto RGB */
+  @keyframes rgbGlow {
+	0% { border-color: red; }
+	33% { border-color: rgb(226, 233, 226); }
+	66% { border-color: rgb(230, 15, 15); }
+	100% { border-color: rgb(12, 11, 11); }
+  }
+a{
+	color: aliceblue;
+	font-family: 'Times New Roman', Times, serif;
+}
+.titulo2{
+	font-size: 70px;
+	
+	font-family:Georgia, 'Times New Roman', Times, serif
+}
+.formulario{
+    background: linear-gradient(to right, rgb(199, 24, 32), rgb(224, 220, 220));
+}
