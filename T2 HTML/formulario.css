@@ -60,3 +60,15 @@ body{
 	height: 40px;
 	background-color: aliceblue;
 }
+.imagen-button {
+	background: url('boton.png');
+	background-size: contain;
+	width: 900px;
+	height: 800px;
+	border: none;
+	cursor: pointer;
+}
+
+.imagen-button:focus {
+	outline: none;
+}

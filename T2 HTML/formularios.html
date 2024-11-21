@@ -39,11 +39,18 @@
         // Ocultar cerrar el formulario"
         document.getElementById("inicioSesion").style.display = "none";
         document.getElementById("formulario1").style.display = "none";
+        document.getElementById("volverAtras").style.display ="block"
     }
+    function volverAtras() {
+        // Volver a la pagina principal del tema 2
+        window.history.back()
+        
+    }
+   
     </script>
-    <div align="center">
+    <div align="center" id ="formulario1">
         <h1 style="text-align: center;">Regístrate para recibir todas las notificaciones acerca de los nuevos avances</h1>
-        <table align="center" border="4" cellpadding="15" class="formulario" id ="formulario1">
+        <table align="center" border="4" cellpadding="15" class="formulario" >
             <tr>
                 <td>
                     <form action="">
@@ -97,6 +104,9 @@
                 </td>
             </tr>
         </table>
+    </div>
+    <div align="center"id="volverAtras" style="display:none;">
+        <button class="imagen-button" onclick="volverAtras()"></button>
     </div>
 </body>
 </html>

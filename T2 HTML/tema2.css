@@ -83,42 +83,9 @@ a{
 	
 	font-family:Georgia, 'Times New Roman', Times, serif
 }
-.cuadro2{
-	width: 330px;
-	padding-left: 3%;
-	padding-right: 3%;
-	height: 330px;
+.separador{
 	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; /* Espacio entre cuadrados */
 	justify-content: center;
-	align-items: center;
-	align-items: center;
-	border: 4px solid transparent;
-	border-radius: 10px;
-	animation: movimiento 240s infinite linear, rgbGlow 10s infinite;
-	background-color: black;
-}.cuadro3{
-	width: 330px;
-	padding-left: 3%;
-	padding-right: 3%;
-	height: 330px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-items: center;
-	border: 4px solid transparent;
-	border-radius: 10px;
-	animation: movimiento 240s infinite linear, rgbGlow 10s infinite;
-	background-color: black;
-}
-.cuadro2 span {
-	font-size: 2em;
-	font-weight: bold;
-	color: white;
-	animation: colorShift 3s infinite;
-}
-.cuadro3 span {
-	font-size: 2em;
-	font-weight: bold;
-	color: white;
-	animation: colorShift 3s infinite;
 }
