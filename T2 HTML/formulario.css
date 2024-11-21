@@ -44,13 +44,19 @@ body{
 	padding: 10px 15px;
 	border: none;
   }
-  
-a{
-	color: aliceblue;
-	font-family: 'Times New Roman', Times, serif;
+  .formulario{
+    background: linear-gradient(to right, rgb(199, 24, 32), rgb(192, 186, 186));
+	border-color: black;
+	animation: movimiento 20s infinite linear, rgbGlow 20s infinite;
+
 }
-.titulo2{
-	font-size: 70px;
-	
-	font-family:Georgia, 'Times New Roman', Times, serif
+.formText{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color: black;
+	font-weight: bold;
+}
+.registrate{
+	width: 100px;
+	height: 40px;
+	background-color: aliceblue;
 }
