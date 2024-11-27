@@ -39,7 +39,7 @@
         // Ocultar cerrar el formulario"
         document.getElementById("inicioSesion").style.display = "none";
         document.getElementById("formulario1").style.display = "none";
-        document.getElementById("volverAtras").style.display ="block"
+        
     }
     function volverAtras() {
         // Volver a la pagina principal del tema 2
@@ -72,7 +72,7 @@
                             <br><br>
                             <p align="center"><button type="button" class="registrate" onclick="openNav1()">Inicio Sesión</button></p>
                             
-                            <input type="button" value="cerrar ventana"onclick="alert('Seguro que quieres cerrar la ventana?');" onclick="window.close( ) ;">
+                            
                         </p>
                     </form>
                 </td>
@@ -80,7 +80,7 @@
         </table>
     </div>
     
-    <div align="" id="inicioSesion" style="display: none;">
+    <div align="" id="inicioSesion" style="display: none;" class="separador">
         <h1 style="text-align: center;">Formulario de Inicio de Sesión</h1>
         <table align="center" border="4" cellpadding="15" class="formulario">
             <tr>
@@ -97,7 +97,7 @@
                             </p>
                             <p align="center">
                                 <button  type ="button" class="registrate" onclick="cerraNav1()">Cerrar formulario</button>
-                            </p>
+                                <button type="button" class="registrate"    onclick="volverAtras()"> Volver al Tema 2</button>                        </p>
                             
                         </p>
                     </form>
@@ -105,10 +105,7 @@
             </tr>
         </table>
     </div>
-    <div align="center"id="volverAtras" style="display:none;">
-        <button  onclick="volverAtras()">
-            <img src="boton.pngç" class="botonAtras"></img>
-        </button>
-    </div>
+    
+   
 </body>
 </html>

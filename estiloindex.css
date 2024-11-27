@@ -1,50 +1,97 @@
 body {
-    background: linear-gradient(to right, rgb(218, 17, 27), rgb(119, 116, 116));
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
 }
 
 .sidebar {
     height: 100%;
-    width: 160px;
+    width: 250px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #2c3e50;
     overflow-x: hidden;
     padding-top: 20px;
+    transition: 0.3s;
 }
 
 .sidebar a {
-    padding: 6px 8px 6px 16px;
+    padding: 15px;
     text-decoration: none;
-    font-size: 20px;
-    color: white;
+    font-size: 18px;
+    color: #ecf0f1;
     display: block;
+    transition: 0.3s;
 }
 
 .sidebar a:hover {
-    color:  #cc0d1d;
+    color: #1abc9c;
 }
 
-.main {
-    margin-left: 160px;
-    padding: 0px 10px;
+.sidebar .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 25px;
+    color: #ecf0f1;
+    cursor: pointer;
 }
 
 .openbtn {
     font-size: 20px;
     cursor: pointer;
-	background-color: rgb(199, 24, 32);
-    color: black;
+    background-color: #1abc9c;
+    color: white;
     padding: 10px 15px;
     border: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    transition: background-color 0.3s;
 }
-.nombre{
-	font-size: 100px;
-	width: 800px;
-	font-family:Georgia, 'Times New Roman', Times, serif
+
+.openbtn:hover {
+    background-color: #16a085;
 }
-img{
-	padding-left: 30%;
-	
+
+.main {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+.nombre {
+    font-size: 50px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.main p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 10px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    font-size: 14px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+iframe.maps {
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+    margin-top: 20px;
 }

@@ -39,13 +39,13 @@ body{
   .openbtn {
 	font-size: 20px;
 	cursor: pointer;
-	background-color: rgb(199, 24, 32);
+	background-color:transparent ;
 	color: black;
 	padding: 10px 15px;
 	border: none;
   }
   .cuadro {
-	width: 530px;
+	width: 430px;
 	padding-left: 3%;
 	padding-right: 3%;
 	height: 430px;
@@ -69,7 +69,7 @@ body{
 
   /* Efecto RGB */
   @keyframes rgbGlow {
-	0% { border-color: red; }
+	10% { border-color:  rgb(199, 24, 32); }
 	33% { border-color: rgb(226, 233, 226); }
 	66% { border-color: rgb(230, 15, 15); }
 	100% { border-color: rgb(12, 11, 11); }
@@ -83,3 +83,17 @@ a{
 	font-size: 70px;
 	font-family:Georgia, 'Times New Roman', Times, serif
 }
+.separador{
+	display: flex;
+	 flex-wrap: wrap;
+    gap: 10px; /* Espacio entre cuadrados */
+    justify-content: center;
+}
+.cuadro:hover{
+
+	width: 350px;
+	height: 350px;
+	cursor: pointer;
+	transition: 0.2s;
+  }
+ 

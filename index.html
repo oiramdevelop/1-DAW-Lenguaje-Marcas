@@ -9,31 +9,46 @@
     
 </head>
 <body>
+</head>
+<body>
     <!-- Botón para abrir la barra lateral -->
     <button class="openbtn" onclick="openNav()">☰</button>
 
-    
+    <!-- Barra lateral -->
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <a href="index.html">Inicio</a>
-        <a href="T1 XML\tema1.html">Tema 1 introduccion a los lenguajes de marcas</a>
-        <a href="T2 HTML\tema2.html">Tema 2 Introduccion al HTML</a>
-       
+        <a href="T1 XML/tema1.html">Tema 1: Introducción a los lenguajes de marcas</a>
+        <a href="T2 HTML/tema2.html">Tema 2: Introducción al HTML</a>
     </div>
 
-    
-    <div id="main" align="center">
-        <a class="nombre">Mario Rodríguez Díaz</a>
-        <p>EN EL MENU ENCONTRARAS DIFERENTES TEMAS DONDES PODRAS ELEGIR QUE EJERCICIO VER DE CADA TEMA , INCLUSO LOS EXAMENES</p>
-        
+    <!-- Contenido principal -->
+    <div id="main" class="main" align=" center">
+        <h1 class="nombre">Lenguajes de Marcas</h1>
+        <p><strong>Mario Rodríguez Díaz</strong></p>
+        <p>En este menú encontrarás diferentes temas y ejercicios de cada sección, así como exámenes para practicar y mejorar tus habilidades.</p>
+        <img src="logo.png" alt="Logo de la empresa">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3203.3887717285825!2d-6.242778923710747!3d36.59294467935437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dd021173d3f65%3A0x2d90da52b414124b!2sIES%20Mar%20de%20C%C3%A1diz!5e0!3m2!1ses!2ses!4v1732696382028!5m2!1ses!2ses" 
+            width="600" 
+            height="450" 
+            class="maps" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
     </div>
 
+    <!-- Pie de página -->
+    <footer>
+        &copy; 2024 Lenguajes de Marcas. Todos los derechos reservados.
+    </footer>
 
     <script>
         // Función para abrir la barra lateral
         function openNav() {
-            document.getElementById("mySidebar").style.width = "160px";
-            document.getElementById("main").style.marginLeft = "160px";
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
         }
 
         // Función para cerrar la barra lateral
@@ -42,6 +57,6 @@
             document.getElementById("main").style.marginLeft = "0";
         }
     </script>
-    <img src="logo.png"></img>
+
 </body>
 </html>
