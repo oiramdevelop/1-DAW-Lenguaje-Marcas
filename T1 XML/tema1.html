@@ -7,44 +7,48 @@
     <link rel="stylesheet" href="tema1.css">
 </head>
 <body>
-    <button class="openbtn" onclick="openNav()">☰</button>
-    <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="../index.html">Inicio</a>
-        <a href="tema1.html">Tema 1 introduccion a los lenguajes de marcas</a>
-        <a href="../T2 HTML\tema2.html">Tema 2 Introduccion al HTML</a>
-        
-    </div>
+ <!-- Botón para abrir la barra lateral -->
+ <button class="openbtn" onclick="openNav()">☰ Menú</button>
 
-    
-    <div id="main" align="center" >
-        <h1 class="titulo1">EJERCICIO TEMA 1</h1>
-        <p>PINCHE EN ALGUNOS DE LOS  EJERCICIOS PARA VERLOS</p>
-    </div>
-    <script>
-        // Función para abrir la barra lateral
-        function openNav() {
-            document.getElementById("mySidebar").style.width = "160px";
-            document.getElementById("main").style.marginLeft = "160px";
-        }
+ <!-- Barra lateral -->
+ <div id="barraLateral  " class="sidebar">
+     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+     <a href="../index.html">Inicio</a>
+     <a href="T1 XML/tema1.html">Tema 1: Introducción a los lenguajes de marcas</a>
+     <a href="../T2 HTML/tema2.html">Tema 2: Introducción al HTML</a>
+ </div>
 
-        // Función para cerrar la barra lateral
-        function closeNav() {
-            document.getElementById("mySidebar").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-        }
-    </script>
+ <!-- Contenido principal -->
+ <div id="main" class="main">
+     <h1 class="titulo1">Ejercicio Tema 1</h1>
+     <p>Haga clic en alguno de los ejercicios para verlos.</p>
+ </div>
 
-    <div align="center" class="separador">
-        <div class="cuadro" align="center">
-            <span>EJERCICIO 1 XML</span>
-        </div>
-        <div class="cuadro">
-            <span><a href="../T1 XML\archivo.xml">   EJERCICIO 2 XML </a></span>
-        </div>
-        <div class="cuadro">
-            <span><a href="../T1 XML\examenUnidad1.xml">EXAMEN UNIDAD 1</a></span>
-        </div>
-    </div>
+ <!-- Cuadros de ejercicios -->
+ <div class="separador">
+     <div class="cuadro">
+         <span>EJERCICIO 1 XML</span>
+     </div>
+     <div class="cuadro">
+         <span><a href="../T1 XML/archivo.xml">EJERCICIO 2 XML</a></span>
+     </div>
+     <div class="cuadro">
+         <span><a href="../T1 XML/examenUnidad1.xml">EXAMEN UNIDAD 1</a></span>
+     </div>
+ </div>
+
+ <script>
+     // Función para abrir la barra lateral
+     function openNav() {
+         document.getElementById("barraLateral").style.width = "250px";
+         document.getElementById("main").style.marginLeft = "250px";
+     }
+
+     // Función para cerrar la barra lateral
+     function closeNav() {
+         document.getElementById("barraLateral").style.width = "0";
+         document.getElementById("main").style.marginLeft = "0";
+     }
+ </script>
 </body>
 </html>
