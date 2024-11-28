@@ -15,7 +15,7 @@
     <button class="openbtn" onclick="openNav()">☰</button>
 
     <!-- Barra lateral -->
-    <div id="mySidebar" class="sidebar">
+    <div id="barraLateral" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <a href="index.html">Inicio</a>
         <a href="T1 XML/tema1.html">Tema 1: Introducción a los lenguajes de marcas</a>
@@ -47,13 +47,13 @@
     <script>
         // Función para abrir la barra lateral
         function openNav() {
-            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("barraLateral").style.width = "250px";
             document.getElementById("main").style.marginLeft = "250px";
         }
 
         // Función para cerrar la barra lateral
         function closeNav() {
-            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("barraLateral").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
         }
     </script>

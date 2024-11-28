@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicio Tema 2</title>
     <link rel="stylesheet" href="tema2.css">
 </head>
 <body>
@@ -11,46 +11,44 @@
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <a href="../index.html">Inicio</a>
-        <a href="../T1 XML\tema1.html">Tema 1 introduccion a los lenguajes de marcas</a>
-        <a href="tema2.html">Tema 2 Introduccion al HTML</a>
-        
+        <a href="../T1 XML/tema1.html">Tema 1: Introducción a los lenguajes de marcas</a>
+        <a href="tema2.html">Tema 2: Introducción al HTML</a>
     </div>
 
-    
-    <div id="main" align="center" >
-        <h1 class="titulo2">EJERCICIO TEMA 2</h1>
-        <p>PINCHE EN ALGUNOS DE LOS  EJERCICIOS PARA VERLOS</p>
+    <div id="main" align="center">
+        <h1 class="titulo2">Ejercicio Tema 2</h1>
+        <p>Pinche en algunos de los ejercicios para verlos</p>
     </div>
+
+    <div class="separador">
+        <div class="cuadro">
+            <span>Ejercicio 1 HTML</span>
+        </div>
+        <div class="cuadro">
+            <span><a href="../T2 HTML/ejercicioTabla.html">Ejercicio 2 HTML (Horario)</a></span>
+        </div>
+        <div class="cuadro">
+            <span><a href="../T2 HTML/frame.html">Ejercicio Frame (Página Club de Rugby)</a></span>
+        </div>
+        <div class="cuadro">
+            <span><a href="../T2 HTML/formularios.html">Formulario</a></span>
+        </div>
+    </div>
+
+    <footer>
+        <p>Mario Rodríguez Díaz</p>
+    </footer>
+
     <script>
-        // Función para abrir la barra lateral
         function openNav() {
-            document.getElementById("mySidebar").style.width = "160px";
-            document.getElementById("main").style.marginLeft = "160px";
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
         }
 
-        // Función para cerrar la barra lateral
         function closeNav() {
             document.getElementById("mySidebar").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
         }
     </script>
-
-<div class="separador">
-    <div class="cuadro">
-        <span>EJERCICIO 1 HTML</span>
-    </div>
-    <div class="cuadro">
-        <span><a href="../T2 HTML/ejercicioTabla.html">EJERCICIO 2 HTML (HORARIO)</a></span>
-    </div>
-    <div class="cuadro">
-        <span><a href="../T2 HTML/frame.html">EJERCICIO FRAME (PAGINA CLUB DE RUGBY)</a></span>
-    </div>
-    <div class="cuadro">
-        <span><a href="../T2 HTML/formularios.html">FORMULARIO</a></span>
-    </div>
-    <footer>
-        <p> Mario Rodriguez Diaz</p>
-    </footer>
-</div>
 </body>
 </html>

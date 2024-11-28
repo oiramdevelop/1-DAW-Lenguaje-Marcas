@@ -1,56 +1,83 @@
-body{
-    background: linear-gradient(to right, rgb(199, 24, 32), rgb(224, 220, 220));
-  }
-.sidebar {
-	height: 100%; /* Altura completa */
-	width: 160px; /* Ancho de la barra lateral */
-	position: fixed; /* Hacer que la barra lateral sea fija */
-	z-index: 1; /* Colocar la barra lateral en la parte superior */
-	top: 0; /* Posicionar la barra lateral en la parte superior */
-	left: 0; /* Posicionar la barra lateral en el lado izquierdo */
-	background-color: #111; /* Color de fondo de la barra lateral */
-	overflow-x: hidden; /* Deshabilitar el desplazamiento horizontal */
-	padding-top: 20px; /* Agregar espacio superior */
-  }
-  
- 
-  .sidebar a {
-	padding: 6px 8px 6px 16px;
-	text-decoration: none;
-	font-size: 20px;
-	color: rgb(226, 217, 217) ;
-	display: block;
-  }
-  
-  
-  .sidebar a:hover {
-	color: #cc0d1d;
-  }
-  
 
-  .main {
-	margin-left: 160px; 
-	padding: 0px 10px;
-	width: 200px;
-	font-family: 'Times New Roman', Times, serif;
-  }
-  
-
-  .openbtn {
-	font-size: 20px;
-	cursor: pointer;
-	background-color:transparent;
-	color: black;
-	padding: 10px 15px;
-	border: none;
-  }
-  
-a{
-	color: aliceblue;
-	font-family: 'Times New Roman', Times, serif;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #2c3e50, #ffffff);
+    color: #2d3436;
 }
-.titulo2{
-	font-size: 70px;
-	
-	font-family:Georgia, 'Times New Roman', Times, serif
+
+#main {
+    padding: 20px;
+}
+
+.titulo2 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Barra lateral */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #2c3e50;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #ecf0f1;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+	background-color:  #bc1a27;
+	color: white;
+}
+
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+}
+
+.openbtn {
+	font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.openbtn:hover {
+    background-color: #bc1a27;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #34495e;
+    color: #ecf0f1;
+    margin-top: 20px;
+}
+
+/* Iframe styling */
+iframe {
+    border: 2px solid #16a085;
+    border-radius: 10px;
+    background: #ecf0f1;
 }

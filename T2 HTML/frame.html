@@ -3,36 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Frame - Club de Rugby</title>
     <link rel="stylesheet" href="frame.css">
 </head>
 <body>
+    <!-- Botón para abrir la barra lateral -->
     <button class="openbtn" onclick="openNav()">☰</button>
+    
+    <!-- Barra lateral -->
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <a href="../index.html">Inicio</a>
-        <a href="../T1 XML\tema1.html">Tema 1 introduccion a los lenguajes de marcas</a>
-        <a href="../T2 HTML\tema2.html">Tema 2 Introduccion al HTML</a>
+        <a href="../T1 XML/tema1.html">Tema 1: Introducción a los Lenguajes de Marcas</a>
+        <a href="../T2 HTML/tema2.html">Tema 2: Introducción al HTML</a>
+    </div>
+
+    <!-- Contenido principal -->
+    <div id="main">
+        <h1 class="titulo2">Página del Club de Rugby</h1>
         
+        <div align="center">
+            <iframe src="https://www.craportuense.com/es/content/pages/12008" 
+                frameborder="2" 
+                scrolling="no" 
+                width="1720" 
+                height="1080px" 
+                align="center">
+            </iframe>
+        </div>
     </div>
-   <div align="center">
-        <iframe src="https://www.craportuense.com/es/content/pages/12008" frameborder="2" scrolling="no" width="1920px" height="1080px" align="center"  ></iframe>
-    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Mario Rodríguez Díaz</p>
+    </footer>
+
     <script>
-        // Función para abrir la barra lateral
         function openNav() {
             document.getElementById("mySidebar").style.width = "160px";
             document.getElementById("main").style.marginLeft = "160px";
         }
 
-        // Función para cerrar la barra lateral
         function closeNav() {
             document.getElementById("mySidebar").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
         }
-        
-</script>
-
-
+    </script>
 </body>
 </html>

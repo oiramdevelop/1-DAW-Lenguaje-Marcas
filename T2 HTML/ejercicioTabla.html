@@ -1,149 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="ejercicioTabla.css">
-    <title>U2 horario </title>
+    <title>Horario 1º DAW</title>
 </head>
-<body >
-   <!-- Botón para abrir la barra lateral -->
+<body>
+    <!-- Botón para abrir la barra lateral -->
     <button class="openbtn" onclick="openNav()">☰</button>
-    <h1> Horario 1º DAW </h1>
-    <table border="2" align="center">
-        <tr class="fila1">
-            <th>Horas</th>
-            <th>Lunes</th>
-            <th> Martes </th>
-            <th>Miercoles</th>
-            <th> Jueves </th>
-            <th> Viernes</th>
-        </tr>
-        <tr>
-            <th class="horas"> 8:30 - 9:30</th>
-            <th class="Endes">ENDES</th>
-            <th class="ingles"> INGLES</th>
-            <th class="lm">LM</th>
-            <th class="sistemas"> SSII</th>
-            <th class="sosten"> SASP</th>
-
-        </tr>
-        <tr>
-            <th class="horas"> 9:30 - 10:30</th>
-            <th class="program"> PROGRAM</th>
-            <th class="Digita"> DIGT</th>
-            <th class="Endes"> ENDES</th>
-            <th class="Endes"> ENDES</th>
-            <th class="IPE"> IPE</th>
-
-        </tr>
-        <tr class="fila4">
-            <th class="horas"> 10:30 - 11:30</th>
-            <th class="program"> PROGRAM</th>
-            <th class="IPE"> IPE</th>
-            <th class="sistemas"> SSII</th>
-            <th class="program"> PROGRAM</th>
-            <th  class="program"> PROGRAM</th>
-
-        </tr>
-        <tr class="fila5">
-            <th class="horas"> 11:30 - 12:00</th>
-            <th class="recreo">R</th>
-            <th  class="recreo">E</th>
-            <th class="recreo">C</th>
-            <th class="recreo">RE</th>
-            <th class="recreo">O</th>
-
-        </tr>
-        <tr>
-            <th class="horas"> 12:00 - 13:00</th>
-            <th class="badat"> BADAT</th>
-            <th  class="badat"> BADAT</th>
-            <th class="sistemas"> SSII</th>
-            <th class="program"> PROGRAM</th>
-            <th class="program"> PROGRAM</th>
-
-        </tr>
-        <tr class="fila7">
-            <th class="horas"> 13:00-14:00</th>
-            <th class="badat"> BADAT</th>
-            <th class="badat"> BADAT</th>
-            <th class="badat"> BADAT</th>
-            <th class="IPE"> IPE</th>
-            <th class="sistemas">SSII</th>
-
-        </tr>
-        <tr class="fila">
-            <th class="horas"> 14:00 - 15:00</th>
-            <th class="ingles"> INGLES</th>
-            <th class="lm"> LM</th>
-            <th class="badat"> BADAT</th>
-            <th class="lm">LM</th>
-            <th class="sistemas"> SSII</th>
-
-        </tr>
-    </table>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h3>
-        ENDES = Entornos de Desarollo Sostenible
-        <br>
-        <br>
-        BADAT = Base de Datos
-        <br>
-        <br>
-        PROGRAM = Prorgamación
-        <br>
-        <br>
-        IPE = Itinerario Personal de Empresa
-        <br>
-        <br>
-        LM = Lenguajes de Marcas
-        <br>
-        <br>
-       SSII= Sistemas Informaticos
-        <br>
-        <br>
-        SASP = Sostenibilidad Aplicada 
-        <br>
-        <br>
-        <!-- Botón para abrir la barra lateral -->
-   
-
     
+    <!-- Barra lateral -->
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <a href="../index.html">Inicio</a>
-        <a href="">Tema 1 introduccion a los lenguajes de marcas</a>
-        <a href="../T2 HTML\tema2.html">Tema 2 Introduccion al HTML</a>
-       
+        <a href="../T1 XML/tema1.html">Tema 1: Introducción a los Lenguajes de Marcas</a>
+        <a href="../T2 HTML/tema2.html">Tema 2: Introducción al HTML</a>
     </div>
 
-    
-    
+    <!-- Contenido principal -->
+    <div id="main">
+        <h1 class="titulo2">Horario 1º DAW</h1>
 
+        <!-- Tabla del horario -->
+        <table border="2" align="center">
+            <tr class="fila1">
+                <th>Horas</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+            <tr>
+                <th class="horas">8:30 - 9:30</th>
+                <td class="Endes">ENDES</td>
+                <td class="ingles">INGLÉS</td>
+                <td class="lm">LM</td>
+                <td class="sistemas">SSII</td>
+                <td class="sosten">SASP</td>
+            </tr>
+            <tr>
+                <th class="horas">9:30 - 10:30</th>
+                <td class="program">PROGRAM</td>
+                <td class="Digita">DIGT</td>
+                <td class="Endes">ENDES</td>
+                <td class="Endes">ENDES</td>
+                <td class="IPE">IPE</td>
+            </tr>
+            <tr>
+                <th class="horas">10:30 - 11:30</th>
+                <td class="program">PROGRAM</td>
+                <td class="IPE">IPE</td>
+                <td class="sistemas">SSII</td>
+                <td class="program">PROGRAM</td>
+                <td class="program">PROGRAM</td>
+            </tr>
+            <tr class="fila5">
+                <th class="horas">11:30 - 12:00</th>
+                <td class="recreo">R</td>
+                <td class="recreo">E</td>
+                <td class="recreo">C</td>
+                <td class="recreo">RE</td>
+                <td class="recreo">O</td>
+            </tr>
+            <tr>
+                <th class="horas">12:00 - 13:00</th>
+                <td class="badat">BADAT</td>
+                <td class="badat">BADAT</td>
+                <td class="sistemas">SSII</td>
+                <td class="program">PROGRAM</td>
+                <td class="program">PROGRAM</td>
+            </tr>
+            <tr>
+                <th class="horas">13:00 - 14:00</th>
+                <td class="badat">BADAT</td>
+                <td class="badat">BADAT</td>
+                <td class="badat">BADAT</td>
+                <td class="IPE">IPE</td>
+                <td class="sistemas">SSII</td>
+            </tr>
+            <tr>
+                <th class="horas">14:00 - 15:00</th>
+                <td class="ingles">INGLÉS</td>
+                <td class="lm">LM</td>
+                <td class="badat">BADAT</td>
+                <td class="lm">LM</td>
+                <td class="sistemas">SSII</td>
+            </tr>
+        </table>
+
+        <!-- Significado -->
+        <div class="separador">
+            <h3 class="significado">Significado:</h3>
+            <p class="asignaturas">ENDES = Entornos de Desarrollo Sostenible</p>
+            <p class="asignaturas" >BADAT = Bases de Datos</p>
+            <p class="asignaturas">PROGRAM = Programación</p>
+            <p class="asignaturas">IPE = Itinerario Personal de Empresa</p>
+            <p class="asignaturas">LM = Lenguajes de Marcas</p>
+            <p class="asignaturas">SSII = Sistemas Informáticos</p>
+            <p class="asignaturas">SASP = Sostenibilidad Aplicada</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Lenguajes de Marcas. Todos los derechos reservados al creador (Mario Rodríguez Díaz).</p>
+    </footer>
 
     <script>
-        // Función para abrir la barra lateral
         function openNav() {
             document.getElementById("mySidebar").style.width = "160px";
             document.getElementById("main").style.marginLeft = "160px";
         }
 
-        // Función para cerrar la barra lateral
         function closeNav() {
             document.getElementById("mySidebar").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
         }
     </script>
-    </h3>
-    <footer>
-        <p> Mario Rodriguez Diaz</p>
-        <img src="logo.png"></img>
-    </footer>
 </body>
 </html>
