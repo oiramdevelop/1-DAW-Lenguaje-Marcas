@@ -6,19 +6,92 @@
     <title>formulario</title>
     <link rel="stylesheet" href="formulario.css">
 </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Estilo</title>
+    <link rel="stylesheet" href="estiloindex.css">
+</head>
 <body>
+    <!-- Botón para abrir la barra lateral -->
     <button class="openbtn" onclick="openNav()">☰</button>
+
+    <!-- Barra lateral -->
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <a href="../index.html">Inicio</a>
-        <a href="../T1 XML\tema1.html">Tema 1 introduccion a los lenguajes de marcas</a>
-        <a href="../T2 HTML\tema2.html">Tema 2 Introduccion al HTML</a>
+        <a href="../T1 XML/tema1.html">Tema 1: Introducción a los lenguajes de marcas</a>
+        <a href="../T2 HTML/tema2.html">Tema 2: Introducción al HTML</a>
     </div>
+
+    <!-- Contenido principal -->
+    <div id="main" class="main">
+        <h1 class="nombre">Formulario de Registro</h1>
+        <div id="formulario1">
+            <h2>Regístrate para recibir actualizaciones</h2>
+            <form>
+                <p class="formText">Nombre:</p>
+                <input type="text" name="nombre" maxlength="40" class="inputField">
+                
+                <p class="formText">Dirección:</p>
+                <input type="text" name="direccion" maxlength="30" class="inputField">
+                
+                <p class="formText">Teléfono:</p>
+                <input type="text" name="telefono" maxlength="10" class="inputField">
+                
+                <p class="formText">Edad:</p>
+                <input type="number" name="edad" maxlength="3" class="inputField">
+
+                <p class="formText">Nombre de Usuario:</p>
+                <input type="number" name="usuario" maxlength="30" class="inputField">
+
+                <p class="formText">Contraseña:</p>
+                <input type="password" name="contrasena" maxlength="20" class="inputField">
+
+                <p class="formText">Género:</p>
+                <label><input type="radio" name="sexo" value="masculino"> Masculino</label>
+                <label><input type="radio" name="sexo" value="femenino"> Femenino</label>
+
+                <div class="formActions">
+                    <button type="button" class="registrate" onclick="openNav1()">Iniciar Sesión</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Formulario de inicio de sesión -->
+        <div id="inicioSesion" style="display: none;">
+            <h2>Formulario de Inicio de Sesión</h2>
+            <form>
+                <p class="formText">Usuario:</p>
+                <input type="text" name="usuario" maxlength="30" class="inputField">
+                
+                <p class="formText">Contraseña:</p>
+                <input type="password" name="contrasena" maxlength="20" class="inputField">
+
+                <div class="formActions">
+                    <button type="button" class="registrate" onclick="closeNav1()">Volver</button>
+                    <button type="button" class="registrate">Aceptar</button>
+                </div>
+                <div class="formActions">
+                    <button type="button" class="registrate" onclick="cerraNav1()">Cerrar Formulario</button>
+                    <button type="button" class="registrate" onclick="volverAtras()">Volver al Tema 2</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        &copy; 2024 Lenguajes de Marcas. Todos los derechos reservados.
+    </footer>
+
     <script>
         // Función para abrir la barra lateral
         function openNav() {
-            document.getElementById("mySidebar").style.width = "160px";
-            document.getElementById("main").style.marginLeft = "160px";
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
         }
 
         // Función para cerrar la barra lateral
@@ -26,86 +99,24 @@
             document.getElementById("mySidebar").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
         }
-        function openNav1() {
-        // Mostrar el formulario con ID "inicioSesion"
-        document.getElementById("inicioSesion").style.display = "block";
-    }
 
-    function closeNav1() {
-        // Ocultar el formulario con ID "inicioSesion"
-        document.getElementById("inicioSesion").style.display = "none";
-    }
-    function cerraNav1() {
-        // Ocultar cerrar el formulario"
-        document.getElementById("inicioSesion").style.display = "none";
-        document.getElementById("formulario1").style.display = "none";
-        
-    }
-    function volverAtras() {
-        // Volver a la pagina principal del tema 2
-        window.history.back()
-        
-    }
-   
+        // Funciones del formulario
+        function openNav1() {
+            document.getElementById("inicioSesion").style.display = "block";
+        }
+
+        function closeNav1() {
+            document.getElementById("inicioSesion").style.display = "none";
+        }
+
+        function cerraNav1() {
+            document.getElementById("inicioSesion").style.display = "none";
+            document.getElementById("formulario1").style.display = "none";
+        }
+
+        function volverAtras() {
+            window.history.back();
+        }
     </script>
-    <div align="center" id ="formulario1">
-        <h1 style="text-align: center;">Regístrate para recibir todas las notificaciones acerca de los nuevos avances</h1>
-        <table align="center" border="4" cellpadding="15" class="formulario" >
-            <tr>
-                <td>
-                    <form action="">
-                        <p class="formText">
-                            Nombre: <input type="text" name="nombre" size="25" maxlength="40">
-                            <br><br>
-                            Dirección: <input type="text" name="direccion" size="20" maxlength="30">
-                            <br><br>
-                            Teléfono: <input type="text" name="telefono" size="10" maxlength="10" value="0">
-                            <br><br>
-                            Edad: <input type="text" name="edad" size="3" maxlength="3" value="0">
-                            <br><br>
-                            Nombre Usuario: <input type="text" name="usuario" size="20" maxlength="30">
-                            <br><br>
-                            Contraseña: <input type="password" name="contrasena" size="20" maxlength="20">
-                            <br><br>
-                            <input type="radio" name="sexo" value="masculino">Masculino
-                            <input type="radio" name="sexo" value="femenino">Femenino
-                            <br><br>
-                            <p align="center"><button type="button" class="registrate" onclick="openNav1()">Inicio Sesión</button></p>
-                            
-                            
-                        </p>
-                    </form>
-                </td>
-            </tr>
-        </table>
-    </div>
-    
-    <div align="" id="inicioSesion" style="display: none;" class="separador">
-        <h1 style="text-align: center;">Formulario de Inicio de Sesión</h1>
-        <table align="center" border="4" cellpadding="15" class="formulario">
-            <tr>
-                <td>
-                    <form action="">
-                        <p class="formText">
-                            Usuario: <input type="text" name="usuario" size="20" maxlength="30">
-                            <br><br>
-                            Contraseña: <input type="password" name="contrasena" size="20" maxlength="20">
-                            <br><br>
-                            <p align="center">
-                                <button type="button" class="registrate" onclick="closeNav1()">Volver</button>
-                                <button type="button" class="registrate" onclick="closeNav2()">Aceptar</button>
-                            </p>
-                            <p align="center">
-                                <button  type ="button" class="registrate" onclick="cerraNav1()">Cerrar formulario</button>
-                                <button type="button" class="registrate"    onclick="volverAtras()"> Volver al Tema 2</button>                        </p>
-                            
-                        </p>
-                    </form>
-                </td>
-            </tr>
-        </table>
-    </div>
-    
-   
 </body>
 </html>
