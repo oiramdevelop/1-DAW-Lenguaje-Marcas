@@ -92,7 +92,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: transform 0.4s, background-color 0.4s;
 }
 
 .cuadro span {
@@ -108,7 +108,7 @@ body {
 }
 
 .cuadro:hover {
-    transform: scale(1.05);
+    transform: scale(1.10);
     background-color:  #bc1a27;
     color: white;
 }
