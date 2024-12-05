@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CV.css">
-    <title>Curriculum Vitae - Mario Rodríguez Díaz</title>
+    <title>Curriculum Vitae</title>
 </head>
 <body>
-    <header>
-        <h1><img src="logo.png" alt="Logo" class="logo">Mario Rodríguez Díaz - Curriculum Vital </h1>
-    </header>
-    
     <!-- Botón para abrir la barra lateral -->
     <button class="openbtn" onclick="openNav()">☰</button>
-    
+
     <!-- Barra lateral -->
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -22,57 +18,62 @@
         <a href="../T2 HTML/tema2.html">Tema 2: Introducción al HTML</a>
     </div>
 
-    <!-- Contenedor del CV -->
+    <!-- Contenido principal -->
     <div id="main">
+        <header>
+            <h1><img src="logo.png" alt="Logo" class="logo">Mario Rodríguez Díaz</h1>
+            <p>Curriculum Vitae</p>
+        </header>
         <div class="cv-container">
-            <section id="perfil">
-                <h2>Perfil</h2>
-                <p>Soy un estudiante de Desarollo de aplicaciones Web , con interes en llegar a ser Ingienerio de Software</p>
-            </section>
-            
-        
-
-            <section id="educacion">
-                <h2>Educación</h2>
+            <aside>
+                <h2>Contacto</h2>
                 <ul>
-                    <li>
-                        <h3>Bachillerato en ciencias y tecnlogia</h3>
-                        <p><strong>Institución:</strong> IES Jose Luis Tejada Peluffo</p>
-                        <p><strong>Período:</strong> 2022 -2024</p>
-                    </li>
+                    <li><strong>Email:</strong> oiramdeveloper@gmail.com</li>
+                    <li><strong>Teléfono:</strong> +34 123 456 789</li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/oiramdevelop" target="_blank">oiramdevelop</a></li>
                 </ul>
-                <ul>
-                    <li>
-                        <h3>Grado Superior en Desarollo de Aplicaciones Web</h3>
-                        <p><strong>Institución:</strong> IES Mar de Cadiz</p>
-                        <p><strong>Período:</strong> 2024 - Actual</p>
-                    </li>
-                </ul>
-            </section>
-
-            <section id="habilidades">
                 <h2>Habilidades</h2>
                 <ul>
                     <li>HTML, CSS, JavaScript</li>
                     <li>Lenguajes de marcas como XML</li>
-                    <li>Python C# C++ C</li>
-                    
+                    <li>Python, C#, C++, C</li>
                 </ul>
-            </section>
+            </aside>
+            <section>
+                <h2>Perfil</h2>
+                <p>Soy un estudiante apasionado por la programación y el desarrollo de software. Mi objetivo es convertirme en ingeniero de software, aplicando mis habilidades para crear soluciones innovadoras.</p>
+                
+                <h2>Educación</h2>
+                <ul>
+                    <li>
+                        <strong>Bachillerato en Ciencias y Tecnología</strong><br>
+                        IES Jose Luis Tejada Peluffo (2022 - 2024)
+                    </li>
+                    <li>
+                        <strong>Grado Superior en Desarrollo de Aplicaciones Web</strong><br>
+                        IES Mar de Cádiz (2024 - Actual)
+                    </li>
+                </ul>
 
-            <section id="contacto">
-                <h2>Contacto</h2>
-                <p><strong>Email:</strong> oiramdeveloper@gmail.com</p>
-                <p><strong>Teléfono:</strong> +34 123 456 789</p>
-                <p><strong>Github:</strong> <a href="https://github.com/oiramdevelop" target="_blank">Github</a></p>
+                <h2>Experiencia</h2>
+                <ul>
+                    <li>
+                        <strong>Proyecto Personal</strong><br>
+                        <em>Desarrollo de una página web interactiva para la gestión de tareas</em> (2023)
+                    </li>
+                    <li>
+                        <strong>Colaboración Voluntaria</strong><br>
+                        <em>Diseño de interfaces para una ONG local</em> (2022)
+                    </li>
+                </ul>
             </section>
         </div>
     </div>
 
     <script>
         function openNav() {
-            document.getElementById("mySidebar").style.width = "160px";
-            document.getElementById("main").style.marginLeft = "160px";
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
         }
 
         function closeNav() {
