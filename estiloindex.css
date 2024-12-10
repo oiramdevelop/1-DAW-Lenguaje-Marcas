@@ -73,12 +73,12 @@ body {
     font-weight: bold;
     color: #2c3e50;
 }
-
+/* footer */
 .main p {
     font-size: 18px;
     line-height: 1.6;
 }
-
+/* footer */
 footer {
     margin-top: 40px;
     text-align: center;
@@ -87,14 +87,15 @@ footer {
     color:  rgb(255, 255, 255);
     font-size: 14px;
 }
-
+/* imagen mapa */
 img {
     max-width: 100%;
     height: auto;
 }
-
+/* mapa */
 iframe.maps {
     border: 2px solid #2c3e50;
-    border-radius: 8px;
+    border-radius: 20px;
     margin-top: 20px;
 }
+
