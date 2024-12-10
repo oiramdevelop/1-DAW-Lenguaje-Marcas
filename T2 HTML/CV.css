@@ -95,6 +95,7 @@ header img.logo {
     border-radius: 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    border: solid 3px  #bc1a27;
 }
 .cv-contenido ul{
     margin-bottom: 20px;
@@ -118,6 +119,8 @@ header img.logo {
     border-radius: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+   
+    border: solid 3px  #bc1a27;
 }
 
 

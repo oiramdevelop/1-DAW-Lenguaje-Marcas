@@ -44,7 +44,7 @@ body {
 /* Botón para abrir la barra lateral */
 .openbtn {
     font-size: 20px;
-    background-color: transparent;
+    background-color:  #bc1a27;
     color: white;
     padding: 10px 15px;
     border: none;
