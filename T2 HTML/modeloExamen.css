@@ -1,0 +1,28 @@
+
+
+.logotipo{
+    border: 2px solid black;
+    padding: 6px;
+}
+.enlac-header{
+    border: 2px solid black;
+    padding: 10px;
+}
+
+
+aside{
+    margin-top: 10px;
+    border: 2px solid black;
+    width: 200px;
+    height: 1000px;
+    padding-left: 5px;
+    
+    
+}
+main{
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 300px;
+    margin-top: 10px;
+
+}
