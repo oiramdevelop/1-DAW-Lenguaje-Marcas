@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+}
+
+.logotipo {
+    color: #CC6600;
+}
+
+.subtitulo {
+    width: 100%;
+    height: 80px;
+    background-color: blue;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.principal {
+    display: flex;
+    gap: 20px;
+}
+
+.principal aside {
+    width: 200px;
+}
+
+.aside1 {
+    border: 1px solid grey;
+    background-color: whitesmoke;
+    padding: 10px;
+    margin-bottom: 20px;
+    height: 600px;
+}
+
+.aside2 {
+    border: 1px solid #CC6600;
+    background-color: rgb(250, 233, 136);
+    padding: 10px;
+    height: 400px;
+}
+
+.principal main {
+    flex-grow: 1;
+}
+
+.articuloGrande {
+    display: flex;
+    gap: 20px;
+}
+
+.articulo {
+    width: 60%;
+}
+
+.contenido {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.imagen img {
+    border-radius: 20px;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(192, 187, 187);
+}
+
+.textoLargo {
+    flex: 1;
+    font-size: 1em;
+}
+
+.seguirLeyendo {
+    color: #CC6600;
+    display: block;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.principal4 .recuadro {
+    border: 2px solid #CC6600;
+    padding: 15px;
+    background-color: #f1d451;
+    width: 100%;
+    height: 400px;
+    margin-left: 30px;
+}
+
+footer {
+    border: 2px solid grey;
+    padding: 10px;
+    text-align: center;
+}
