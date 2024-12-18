@@ -1,1 +1,119 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(124, 121, 121);
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(209, 14, 14, 0.1);
+    overflow: hidden;
+    
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #770b1a;
+    color: #fff;
+}
+
+.photo-box {
+    width: 120px;
+    height: 120px;
+    background: #d3d3d3;
+    border: 3px solid #080808;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-info {
+    flex-grow: 1;
+}
+
+.header-name {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.header-subtitle {
+    font-size: 1rem;
+    margin: 5px 0 0;
+}
+
+/* Box Body */
+.box-body {
+    padding: 20px;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+section h2 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #2c3e50;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+section p, section ul {
+    margin: 0;
+}
+
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Links */
+a {
+    color: #bc1a27;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design ( para el movil) */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .photo-box {
+        margin-bottom: 15px;
+    }
+
+    .header-name {
+        font-size: 1.5rem;
+    }
+
+    .header-subtitle {
+        font-size: 0.9rem;
+    }
+}
 
