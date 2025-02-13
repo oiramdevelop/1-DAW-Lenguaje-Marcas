@@ -1,9 +1,11 @@
+
+
 /* Estilo general */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     color: #333;
-    background: linear-gradient(to right, #2c3e50, #ffffff);
+    background: linear-gradient(to left, #fffb17, #9df06d);
 }
 
 /* Barra lateral */
