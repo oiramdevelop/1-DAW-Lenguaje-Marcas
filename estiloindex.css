@@ -1,112 +1,84 @@
+
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: #000000;
-    background: linear-gradient(to left, #fffb17, #9df06d);;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: linear-gradient(to left, #fffb17, #9df06d);
 }
-/* MEnu */
 .sidebar {
     height: 100%;
-    width: 250px;
+    width: 0;
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
-    background-color: #ffffff;
+    background-color: #fff;
     overflow-x: hidden;
     padding-top: 20px;
-    transition: 0.3s;
-
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
 }
-
 .sidebar a {
     display: block;
-	padding: 15px;
-	font-size: 18px;
-	text-decoration: none;
-	color: #000000;
-	transition: 0.3s;
-
+    padding: 15px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.3s ease-in-out;
 }
-
 .sidebar a:hover {
-	background-color:  #9df06d;
-	color: white;
+    background-color: #9df06d;
+    color: #fff;
 }
-
 .sidebar .closebtn {
     position: absolute;
-    top: 0px;
+    top: 10px;
     right: 20px;
     font-size: 25px;
-    color: #ecf0f1;
+    color: #000;
     cursor: pointer;
 }
-/* Botón abrir barra lateral */
 .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color:transparent;
-    color: rgb(0, 0, 0);
+    background-color: transparent;
+    color: #000;
     padding: 10px 15px;
-    border: none;
+    border: 1px solid #333;
     border-radius: 5px;
     position: absolute;
     top: 30px;
     left: 30px;
-   
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease-in-out;
 }
-
 .openbtn:hover {
-    background-color: white;
+    background-color: #fff;
 }
-
 .main {
-    margin-left: 250px;
+    margin-left: 0;
     padding: 20px;
-    transition: margin-left 0.3s;
+    transition: margin-left 0.3s ease-in-out;
+    text-align: center;
 }
-
 .nombre {
     font-size: 60px;
     font-weight: bold;
-    color: #000000;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
 }
-/*Informacion*/ 
-.informacion{
+.informacion {
     border-radius: 10px;
-    border: solid;
+    border: solid 1px #000;
     background-color: white;
-    border-color: #000000;
     width: 250px;
-    height: 250px;
-    align-items: center;
-}
-/* footer */
-.main p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-/* footer */
-footer {
-    margin-top: 40px;
+    padding: 15px;
     text-align: center;
-    padding: 30px;
-    background-color:transparent;
-    color:  rgb(0, 0, 0);
-    font-size: 14px;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
 }
-/* imagen mapa */
-img {
-    max-width: 100%;
-    height: auto;
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #fff;
+    margin-bottom: 0px;
+    border-top: 1px solid #ddd;
 }
-/* mapa */
-iframe.maps {
-    border: 2px solid #2c3e50;
-    border-radius: 20px;
-    margin-top: 20px;
-}
-

@@ -1,67 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="estiloindex.css">
-
-    
+    <title>Lenguajes de Marcas</title>
+    <link rel="stylesheet" href="estilndex.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to left, #fffb17, #9df06d);
+            color: #333;
+            text-align: center;
+        }
+        .navbar {
+            background-color: #000;
+            overflow: hidden;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            color: #9df06d;
+        }
+        .content {
+            margin-top: 80px;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px auto;
+            width: 80%;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .button {
+            background: #000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #9df06d;
+        }
+    </style>
 </head>
 <body>
-</head>
-<body>
-    <!-- Botón para abrir la barra lateral -->
-    <button class="openbtn" onclick="openNav()">☰</button>
-
-    <!-- Barra lateral -->
-    <div id="barraLateral" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="index.html">Inicio</a>
-        <a href="T1 XML/tema1.html">Tema 1: Introducción a los lenguajes de marcas</a>
-        <a href="T2 HTML/tema2.html">Tema 2: Introducción al HTML</a>
+    <div class="navbar">
+        <a href="#">Inicio</a>
+        <a href="#info">Información</a>
+        <a href="#contacto">Contacto</a>
     </div>
-    <div class="informacion" id="informacion">
-        <p>En este menú encontrarás diferentes temas y ejercicios de cada sección, así como exámenes para practicar y mejorar tus habilidades.</p>
-    </div>
-
-    <!-- Contenido principal -->
-    <div id="main" class="main" align=" center">
-        <h1 class="nombre">Lenguajes de Marcas</h1>
-        <p><strong>Mario Rodríguez Díaz</strong></p>
-        
-        <img src="logo.png">
+    <div class="content">
+        <h1>Lenguajes de Marcas</h1>
+        <p>Explora temas y ejercicios sobre lenguajes de marcas</p>
+        <div class="card">
+            <h2>Bienvenido</h2>
+            <p>En este sitio encontrarás información relevante sobre lenguajes de marcas y su aplicación.</p>
+            <button class="button" onclick="showMessage()">Más Información</button>
+        </div>
+        <img src="logo.png" alt="Logo" style="max-width: 100%; height: auto;">
         <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3203.3887717285825!2d-6.242778923710747!3d36.59294467935437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dd021173d3f65%3A0x2d90da52b414124b!2sIES%20Mar%20de%20C%C3%A1diz!5e0!3m2!1ses!2ses!4v1732696382028!5m2!1ses!2ses" 
             width="600" 
             height="450" 
-            class="maps" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
+            allowfullscreen 
+            loading="lazy">
         </iframe>
     </div>
-
-    <!-- Pie de página -->
     <footer>
-        &copy; 2024 Lenguajes de Marcas. Todos los derechos reservados al creador (Mario Rodríguez Díaz).
+        <p>&copy; 2024 Lenguajes de Marcas. Todos los derechos reservados.</p>
     </footer>
-
     <script>
-        // Función para abrir la barra lateral
-        function openNav() {
-            document.getElementById("barraLateral").style.width = "250px";
-            document.getElementById("informacion").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
-
-        // Función para cerrar la barra lateral
-        function closeNav() {
-            document.getElementById("barraLateral","informacion").style.width = "0";
-            document.getElementById("informacion").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
+       
+        function showMessage() {
+            alert('¡Gracias por visitar nuestro sitio! Aprende más sobre lenguajes de marcas.');
         }
     </script>
-
 </body>
 </html>
