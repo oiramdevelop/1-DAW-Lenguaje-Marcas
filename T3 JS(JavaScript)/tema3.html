@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Tema 2</title>
+    <link rel="stylesheet" href="tema3.css">
+</head>
+<body>
+    <button class="openbtn" onclick="openNav()">☰</button>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="../index.html">Inicio</a>
+        <a href="../T1 XML/tema1.html">Tema 1: Introducción a los lenguajes de marcas</a>
+        <a href="tema2.html">Tema 2: Introducción al HTML</a>
+    </div>
+
+    <div id="main" align="center">
+        <h1 class="titulo2">Ejercicio Tema 2</h1>
+        <p>Pinche en algunos de los ejercicios para verlos</p>
+    </div>
+
+    <div class="separador">
+         
+        <div class="cuadro">
+            <span><a href="../T3 JS(JavaScript)\vector\vector.html">Vector JS</a></span>
+        </div>
+        <div class="cuadro">
+            <span><a href="../T3 JS(JavaScript)\potencia\potencia.html">potencia</a></span>
+        </div>
+       
+
+    <footer>
+        &copy; 2024 Lenguajes de Marcas. Todos los derechos reservados al creador (Mario Rodríguez Díaz).
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>
