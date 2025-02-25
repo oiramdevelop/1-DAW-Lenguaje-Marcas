@@ -13,5 +13,5 @@ if (Potencia === "si") {
     let resultado = potencia(num1, num2);
     document.write(`El resultado de ${num1}^${num2} es: ${resultado}`);
 } else {
-    alert("VALE COLEGA");
+    alert("VALE COLEGA PERDONA");
 }

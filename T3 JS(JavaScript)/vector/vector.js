@@ -3,6 +3,7 @@ let sum = 0;
 while (true) {
     let input = prompt("Ingrese un número (o 'N' para terminar):");
     if (input.toUpperCase() === 'N') {
+        alert("Aqui tienes loco")
         break;
     }
     let number = parseFloat(input);
@@ -13,4 +14,4 @@ while (true) {
     }
 }
 
-alert ("Sumatorio de los números: " + sum);
+document.write("/n Sumatorio de los números: " + sum);
