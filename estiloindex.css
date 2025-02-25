@@ -34,6 +34,7 @@ body {
     margin-top: 80px;
     padding: 20px;
 }
+/*Card*/
 .card {
     background: white;
     padding: 20px;
@@ -58,4 +59,14 @@ body {
 }
 .button:hover {
     background: #9df06d;
+}
+/*Footer*/
+/* Footer */
+footer {
+    margin-top: 260px;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 15px;
+    background-color:black;
+    color: #ecf0f1;
 }
