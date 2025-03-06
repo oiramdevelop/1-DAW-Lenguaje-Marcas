@@ -23,11 +23,12 @@ function ocultar_impares(){
 
 function main(){
 
+    //Mostrar elementos pares e impares
     $("#mostrar_pares").click(mostrar_pares)
     $("#mostrar_impares").click(mostrar_impares)
 
 
-    
+    // Ocultar los elementos
     $("#ocultar_pares").click(ocultar_pares)
     $("#ocultar_impares").click(ocultar_impares)
 
