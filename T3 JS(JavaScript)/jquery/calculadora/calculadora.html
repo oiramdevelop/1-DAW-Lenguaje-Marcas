@@ -1,37 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="calculadora.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="calculadora.css">
-    <title>Document</title>
+    <title>Calculadora con jQuery</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="contender">
-        <div class="pantalla">
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button data-value="7">7</button>
+            <button data-value="8">8</button>
+            <button data-value="9">9</button>
+            <button data-value="/">/</button>
 
-        </div>
-        <div class="teclado">
-            <div class="primera_linea">
-                <input type="button" value="7" class="boton" id ="7">
-                <input type="button" value="8" class="boton" id ="8">
-                <input type="button" value="9" class="boton" id ="9">
-            </div>
-            <div class="segunda_linea">
-                <input type="button" value="4" class="boton" id ="4">
-                <input type="button" value="5" class="boton" id ="5">
-                <input type="button" value="6" class="boton" id ="6">
-            </div>
-            <div class="tercera_linea">
-                <input type="button" value="1" class="boton" id ="1">
-                <input type="button" value="2" class="boton" id ="2">
-                <input type="button" value="3" class="boton" id ="3">
-            </div>
-            <input type="button" value="Calcular" class="Calcular" id="Calcular">
-        </div>
+            <button data-value="4">4</button>
+            <button data-value="5">5</button>
+            <button data-value="6">6</button>
+            <button data-value="*">*</button>
 
+            <button data-value="1">1</button>
+            <button data-value="2">2</button>
+            <button data-value="3">3</button>
+            <button data-value="-">-</button>
+
+            <button data-value="0">0</button>
+            <button data-value=".">.</button>
+            <button data-value="C">C</button>
+            <button data-value="+">+</button>
+
+            <button data-value="=" class="equals">=</button>
+        </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
