@@ -38,6 +38,7 @@ $(document).ready(function() {
     function calculate(a, b, op) {
         a = parseFloat(a);
         b = parseFloat(b);
+
         switch (op) {
             case '+':
                 return a + b;
@@ -46,6 +47,9 @@ $(document).ready(function() {
             case '*':
                 return a * b;
             case '/':
+                if (b === 0) {
+                    return "Error: División por cero";
+                }
                 return a / b;
             default:
                 return 0;
