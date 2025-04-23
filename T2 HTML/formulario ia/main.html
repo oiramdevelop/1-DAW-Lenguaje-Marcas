@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario IA</title>
+</head>
+<body>
+
+<style>
+    .resultado {
+        border: 1px solid black;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #f0f0f0;
+        width: 300px;
+    }
+</style>
+
+<script>
+    function validarSeleccion() {
+        const motorSeleccionado = document.querySelector('input[name="motor"]:checked');
+        const transmisionSeleccionada = document.querySelector('input[name="transmision"]:checked');
+        const traccionSeleccionada = document.querySelector('input[name="traccion"]:checked');
+        const carroceriaSeleccionada = document.querySelector('input[name="carroceria"]:checked');
+        const puertasSeleccionada = document.querySelector('input[name="puertas"]:checked');
+
+        if (!motorSeleccionado || !transmisionSeleccionada || !traccionSeleccionada || !carroceriaSeleccionada || !puertasSeleccionada) {
+            alert("Por favor selecciona una opción de motor, transmisión, tracción, carrocería y puertas.");
+            return;
+        }
+
+        alert("¡Selección válida!");
+    }
+
+    function generarTextoIa() {
+        const motorSeleccionado = document.querySelector('input[name="motor"]:checked').value;
+        const transmisionSeleccionada = document.querySelector('input[name="transmision"]:checked').value;
+        const traccionSeleccionada = document.querySelector('input[name="traccion"]:checked').value;
+        const carroceriaSeleccionada = document.querySelector('input[name="carroceria"]:checked').value;
+        const puertasSeleccionada = document.querySelector('input[name="puertas"]:checked').value;
+
+        const textoGenerado = `
+            Motor: ${motorSeleccionado} <br>
+            Transmisión: ${transmisionSeleccionada} <br>
+            Tracción: ${traccionSeleccionada} <br>
+            Carrocería: ${carroceriaSeleccionada} <br>
+            Puertas: ${puertasSeleccionada}
+        `;
+
+        const contenedorTexto = document.createElement('div');
+        contenedorTexto.className = "resultado";
+        contenedorTexto.innerHTML = textoGenerado;
+
+        // Agregar el texto generado al final del cuerpo del documento
+        document.body.appendChild(contenedorTexto);
+    }
+</script>
+
+<div class="main">
+    <div class="motor">
+        <input type="radio" name="motor" id="gasolina" value="gasolina">
+        <label for="gasolina">Gasolina</label>
+        <input type="radio" name="motor" id="diesel" value="diesel">
+        <label for="diesel">Diesel</label>
+        <input type="radio" name="motor" id="electrico" value="electrico">
+        <label for="electrico">Eléctrico</label>
+        <input type="radio" name="motor" id="hibrido" value="hibrido">
+        <label for="hibrido">Híbrido</label>
+    </div>
+
+    <div class="transmision">
+        <input type="radio" name="transmision" id="manual" value="manual">
+        <label for="manual">Manual</label>
+        <input type="radio" name="transmision" id="automatica" value="automatica">
+        <label for="automatica">Automática</label>
+        <input type="radio" name="transmision" id="CVT" value="CVT">
+        <label for="CVT">CVT</label>
+        <input type="radio" name="transmision" id="dobleEmbrague" value="dobleEmbrague">
+        <label for="dobleEmbrague">Doble Embrague</label>
+    </div>
+
+    <div class="traccion">
+        <input type="radio" name="traccion" id="delantera" value="delantera">
+        <label for="delantera">Delantera</label>
+        <input type="radio" name="traccion" id="trasera" value="trasera">
+        <label for="trasera">Trasera</label>
+        <input type="radio" name="traccion" id="integral" value="integral">
+        <label for="integral">Integral o Total (AWD, 4x4)</label>
+    </div>
+
+    <div class="carroceria">
+        <input type="radio" name="carroceria" id="sedan" value="sedan">
+        <label for="sedan">Sedán</label>
+        <input type="radio" name="carroceria" id="hatchback" value="hatchback">
+        <label for="hatchback">Hatchback</label>
+        <input type="radio" name="carroceria" id="SUV" value="SUV">
+        <label for="SUV">SUV</label>
+        <input type="radio" name="carroceria" id="pickup" value="pickup">
+        <label for="pickup">Pickup</label>
+        <input type="radio" name="carroceria" id="monovolumen" value="monovolumen">
+        <label for="monovolumen">Monovolumen</label>
+        <input type="radio" name="carroceria" id="coupé" value="coupé">
+        <label for="coupé">Coupé</label>
+        <input type="radio" name="carroceria" id="cabriolet" value="cabriolet">
+        <label for="cabriolet">Cabrio/Descapotable</label>
+        <input type="radio" name="carroceria" id="familiar" value="familiar">
+        <label for="familiar">Familiar</label>
+    </div>
+
+    <div class="puertas">
+        <input type="radio" name="puertas" id="3puertas" value="3puertas">
+        <label for="3puertas">3 Puertas</label>
+        <input type="radio" name="puertas" id="5puertas" value="5puertas">
+        <label for="5puertas">5 Puertas</label>
+        <input type="radio" name="puertas" id="4puertas" value="4puertas">
+        <label for="4puertas">4 Puertas</label>
+        <input type="radio" name="puertas" id="2puertas" value="2puertas">
+        <label for="2puertas">2 Puertas</label>
+    </div>
+
+    <div class="boton">
+        <button type="button" onclick="validarSeleccion()">Enviar</button>
+        <button type="button" onclick="generarTextoIa()">Generar Texto</button>
+    </div>
+</div>
+
+</body>
+</html>
