@@ -1,0 +1,36 @@
+.resultado {
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f0f0f0;
+    width: 300px;
+}
+.main{
+    align-content: center;
+    align-self: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.main-container{
+    margin-left: 30%;
+    border: 2px solid #000000;
+    padding: 20px;
+    margin-right: 30%;
+    font-family: Arial, sans-serif;
+}
+.motor{
+    padding: 20px;
+}
+.transmision{
+    padding: 20px;
+}
+.traccion{
+    padding: 20px;
+}
+.carroceria{
+    padding: 20px;
+}
+.puertas{
+    padding: 20px;
+}
