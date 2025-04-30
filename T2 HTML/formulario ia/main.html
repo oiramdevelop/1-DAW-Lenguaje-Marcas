@@ -11,7 +11,7 @@
       --secondary: #9089FC;
       --bg-page: #F4F6FA;
       --card-bg: #ffffff;
-      --card-result-bg: #b67bfa;
+      --card-result-bg: #fcf5f5;
       --text-color: #2D3748;
       --accent: #4FD1C5;
     }
@@ -105,16 +105,18 @@
       transform: translateY(-2px);
     }
     .resultado {
-      background: var(--primary);
+      background: var(--card-result-bg);
       border-radius: 8px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
       padding: 20px;
       margin-top: 24px;
       font-weight: 500;
       line-height: 1.5;
+     
     }
     .resultado strong {
-      color: var(--accent);
+      color: var(--secondary);
+      
     }
   </style>
 </head>
@@ -168,6 +170,9 @@
     <div class="buttons">
       <button type="button" onclick="validarSeleccion()">Enviar</button>
       <button type="button" onclick="generarTextoIa()">Generar Texto</button>
+      <button type="button" onclick="enviarFormularioAPI()">Enviar a  la API</button>
+
+      
     </div>
 
     <div class="resultado" id="output" style="display:none;"></div>
@@ -206,6 +211,66 @@
       output.innerHTML = textoHTML;
       output.style.display = 'block';
     }
+  
+
+  function generarTextoIa() {
+    if (!validarSeleccion()) return;
+    const motor = document.querySelector('input[name="motor"]:checked').value;
+    const transmision = document.querySelector('input[name="transmision"]:checked').value;
+    const traccion = document.querySelector('input[name="traccion"]:checked').value;
+    const carroceria = document.querySelector('input[name="carroceria"]:checked').value;
+    const puertas = document.querySelector('input[name="puertas"]:checked').value;
+
+    const textoHTML = `
+      
+      Quiero los 3 mejores coches que sean de motor  <strong>${motor}</strong>  transmision <strong> ${transmision}</strong> que tengan traccion 
+<strong>${traccion}</strong> ,  tipo de carroceria <strong> ${carroceria} </strong> y con <strong> ${puertas} </strong> puertas.
+
+    `;
+
+    const output = document.getElementById('output');
+    output.innerHTML = textoHTML;
+    output.style.display = 'block';
+  }
+
+  function enviarFormularioAPI() {
+    if (!validarSeleccion()) return;
+
+    const motor = document.querySelector('input[name="motor"]:checked').value;
+    const transmision = document.querySelector('input[name="transmision"]:checked').value;
+    const traccion = document.querySelector('input[name="traccion"]:checked').value;
+    const carroceria = document.querySelector('input[name="carroceria"]:checked').value;
+    const puertas = document.querySelector('input[name="puertas"]:checked').value;
+
+    const url = 'https://magicloops.dev/api/loop/b999efdb-8fef-416f-bca7-67afd9c7d706/run?';
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        motor,
+        transmision,
+        traccion,
+        carroceria,
+        puertas
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      const output = document.getElementById('output');
+      output.innerHTML = `<strong>Resultado IA:</strong><br>${data.resultado || JSON.stringify(data)}`;
+      output.style.display = 'block';
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert("Hubo un error al conectarse con la API.");
+    });
+  }
+
+    
+    
   </script>
 </body>
 </html>
