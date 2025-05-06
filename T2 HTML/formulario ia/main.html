@@ -191,27 +191,7 @@
       return true;
     }
 
-    function generarTextoIa() {
-      if (!validarSeleccion()) return;
-      const motor = document.querySelector('input[name="motor"]:checked').value;
-      const transmision = document.querySelector('input[name="transmision"]:checked').value;
-      const traccion = document.querySelector('input[name="traccion"]:checked').value;
-      const carroceria = document.querySelector('input[name="carroceria"]:checked').value;
-      const puertas = document.querySelector('input[name="puertas"]:checked').value;
-
-      const textoHTML = `
-        <strong>Motor:</strong> ${motor}<br>
-        <strong>Transmisión:</strong> ${transmision}<br>
-        <strong>Tracción:</strong> ${traccion}<br>
-        <strong>Carrocería:</strong> ${carroceria}<br>
-        <strong>Puertas:</strong> ${puertas}
-      `;
-
-      const output = document.getElementById('output');
-      output.innerHTML = textoHTML;
-      output.style.display = 'block';
-    }
-  
+    
 
   function generarTextoIa() {
     if (!validarSeleccion()) return;
@@ -260,7 +240,7 @@
     .then(response => response.json())
     .then(data => {
       const output = document.getElementById('output');
-      output.innerHTML = `<strong>Resultado IA:</strong><br>${data.resultado || JSON.stringify(data)}`;
+      output.innerHTML = `<strong>Resultado IA:</strong>${data.resultado || JSON.stringify(data)}`;
       output.style.display = 'block';
     })
     .catch(error => {
