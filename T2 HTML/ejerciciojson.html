@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Animales</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            padding: 20px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        #animals-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .animal-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .animal-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .animal-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .animal-info {
+            padding: 15px;
+        }
+        
+        .animal-name {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .animal-species {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+        
+        .animal-detail {
+            margin: 5px 0;
+            color: #34495e;
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 600px) {
+            #animals-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>🐾 Lista de Animales 🐾</header>
+    <div id="animals-container"></div>
+
+    <script>
+        // JSON integrado directamente en el JavaScript
+        const animalsData = {
+            "animals": [
+                {
+                    "name": "León",
+                    "species": "Panthera leo",
+                    "habitat": "Sabana africana",
+                    "diet": "Carnívoro",
+                    "lifespan": 15,
+                    "image": "https://cdn.pixabay.com/photo/2018/07/31/22/08/lion-3576045_640.jpg"
+                },
+                {
+                    "name": "Delfín",
+                    "species": "Delphinus delphis",
+                    "habitat": "Océanos",
+                    "diet": "Carnívoro",
+                    "lifespan": 25,
+                    "image": "https://cdn.pixabay.com/photo/2017/01/18/11/51/delfin-1989625_960_720.jpg "
+                },
+                {
+                    "name": "Águila",
+                    "species": "Aquila chrysaetos",
+                    "habitat": "Montañas",
+                    "diet": "Carnívoro",
+                    "lifespan": 20,
+                    "image": "https://cdn.pixabay.com/photo/2017/06/09/09/39/adler-2386314_640.jpg"
+                },
+                {
+                    "name": "Oso Panda",
+                    "species": "Ailuropoda melanoleuca",
+                    "habitat": "Bosques de bambú",
+                    "diet": "Herbívoro",
+                    "lifespan": 20,
+                    "image": "https://cdn.pixabay.com/photo/2016/03/04/22/54/panda-1236875_640.jpg"
+                },
+                {
+                    "name": "Tigre",
+                    "species": "Panthera tigris",
+                    "habitat": "Selvas y bosques",
+                    "diet": "Carnívoro",
+                    "lifespan": 15,
+                    "image": "https://cdn.pixabay.com/photo/2017/07/24/19/57/tiger-2535888_640.jpg"
+                },
+                {
+                    "name": "parangaricutirimicuaro",
+                    "species": "parangaricutirimicuaro ticus de ticus",
+                    "habitat": "Paraguay",
+                    "diet": "Papas fritas",
+                    "lifespan": 5,
+                    "image": "https://i.pinimg.com/736x/9a/1a/4f/9a1a4f8dd71c97536bb847f9f08a54e1.jpg"
+
+                },
+                {
+                    "name": "Tortuga",
+                    "species": "Chelonia mydas",
+                    "habitat": "Océanos y playas",
+                    "diet": "Herbívoro",
+                    "lifespan": 80,
+                    "image": "https://cdn.pixabay.com/photo/2023/08/19/05/31/green-sea-turtle-8199770_960_720.jpg"
+                },
+                {
+                    "name": "Elefante",
+                    "species": "Loxodonta africana",
+                    "habitat": "Sabana africana",
+                    "diet": "Herbívoro",
+                    "lifespan": 60,
+                    "image": "https://cdn.pixabay.com/photo/2013/05/17/07/12/elephant-111695_1280.jpg "
+                },
+                {
+                    "name": "Canguro",
+                    "species": "Macropus rufus",
+                    "habitat": "Praderas australianas",
+                    "diet": "Herbívoro",
+                    "lifespan": 20,
+                    "image": "https://cdn.pixabay.com/photo/2022/03/10/11/03/eastern-grey-kangaroo-7059640_1280.jpg"
+                },
+                {
+                    "name": "Pingüino",
+                    "species": "Spheniscidae",
+                    "habitat": "Antártida y regiones frías",
+                    "diet": "Carnívoro",
+                    "lifespan": 20,
+                    "image": "https://cdn.pixabay.com/photo/2023/02/22/18/11/african-penguin-7807149_1280.jpg"
+                }
+            ]
+        };
+
+        // Función para mostrar los animales
+        function displayAnimals() {
+            const container = document.getElementById('animals-container');
+            
+            if (animalsData.animals && animalsData.animals.length > 0) {
+                animalsData.animals.forEach(animal => {
+                    const card = document.createElement('div');
+                    card.className = 'animal-card';
+                    card.innerHTML = `
+                        <img src="${animal.image}" alt="${animal.name}" class="animal-image">
+                        <div class="animal-info">
+                            <h2 class="animal-name">${animal.name}</h2>
+                            <p class="animal-species">${animal.species}</p>
+                            <p class="animal-detail"><strong>Hábitat:</strong> ${animal.habitat}</p>
+                            <p class="animal-detail"><strong>Dieta:</strong> ${animal.diet}</p>
+                            <p class="animal-detail"><strong>Vida promedio:</strong> ${animal.lifespan} años</p>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            } else {
+                container.innerHTML = '<p class="error-message">No hay datos de animales disponibles.</p>';
+            }
+        }
+
+        
+        document.addEventListener('DOMContentLoaded', displayAnimals);
+    </script>
+</body>
+</html>
