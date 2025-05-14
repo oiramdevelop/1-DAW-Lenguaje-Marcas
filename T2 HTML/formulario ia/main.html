@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario IA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #6C5DD3;
+      --secondary: #9089FC;
+      --bg-page: #F4F6FA;
+      --card-bg: #ffffff;
+      --card-result-bg: #fcf5f5;
+      --text-color: #2D3748;
+      --accent: #4FD1C5;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-page);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+    .main-container {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      padding: 32px;
+      width: 100%;
+      max-width: 480px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 24px;
+      color: var(--primary);
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .section p {
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .section label {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 16px;
+      position: relative;
+      padding-left: 28px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .section label:hover {
+      color: var(--primary);
+    }
+    .section input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .section label::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--primary);
+      border-radius: 50%;
+      background: #fff;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .section input[type="radio"]:checked + label::before {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+    .buttons {
+      text-align: center;
+      margin-top: 16px;
+    }
+    .buttons button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      margin: 0 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .buttons button:hover {
+      background: var(--secondary);
+      transform: translateY(-2px);
+    }
+    .resultado {
+      background: var(--card-result-bg);
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      padding: 20px;
+      margin-top: 24px;
+      font-weight: 500;
+      line-height: 1.5;
+     
+    }
+    .resultado strong {
+      color: var(--secondary);
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <h1>Configuración de Auto</h1>
+
+    <div class="section">
+      <p>Motor:</p>
+      <input type="radio" id="gasolina" name="motor" value="Gasolina"><label for="gasolina">Gasolina</label>
+      <input type="radio" id="diesel" name="motor" value="Diesel"><label for="diesel">Diesel</label>
+      <input type="radio" id="electrico" name="motor" value="Eléctrico"><label for="electrico">Eléctrico</label>
+      <input type="radio" id="hibrido" name="motor" value="Híbrido"><label for="hibrido">Híbrido</label>
+    </div>
+
+    <div class="section">
+      <p>Transmisión:</p>
+      <input type="radio" id="manual" name="transmision" value="Manual"><label for="manual">Manual</label>
+      <input type="radio" id="automatica" name="transmision" value="Automática"><label for="automatica">Automática</label>
+      <input type="radio" id="CVT" name="transmision" value="CVT"><label for="CVT">CVT</label>
+      <input type="radio" id="dobleEmbrague" name="transmision" value="Doble Embrague"><label for="dobleEmbrague">Doble Embrague</label>
+    </div>
+
+    <div class="section">
+      <p>Tracción:</p>
+      <input type="radio" id="delantera" name="traccion" value="Delantera"><label for="delantera">Delantera</label>
+      <input type="radio" id="trasera" name="traccion" value="Trasera"><label for="trasera">Trasera</label>
+      <input type="radio" id="integral" name="traccion" value="Integral"><label for="integral">Integral (AWD, 4x4)</label>
+    </div>
+
+    <div class="section">
+      <p>Carrocería:</p>
+      <input type="radio" id="sedan" name="carroceria" value="Sedán"><label for="sedan">Sedán</label>
+      <input type="radio" id="hatchback" name="carroceria" value="Hatchback"><label for="hatchback">Hatchback</label>
+      <input type="radio" id="SUV" name="carroceria" value="SUV"><label for="SUV">SUV</label>
+      <input type="radio" id="pickup" name="carroceria" value="Pickup"><label for="pickup">Pickup</label>
+      <input type="radio" id="monovolumen" name="carroceria" value="Monovolumen"><label for="monovolumen">Monovolumen</label>
+      <input type="radio" id="coupé" name="carroceria" value="Coupé"><label for="coupé">Coupé</label>
+      <input type="radio" id="cabriolet" name="carroceria" value="Descapotable"><label for="cabriolet">Descapotable</label>
+      <input type="radio" id="familiar" name="carroceria" value="Familiar"><label for="familiar">Familiar</label>
+    </div>
+
+    <div class="section">
+      <p>Puertas:</p>
+      <input type="radio" id="3puertas" name="puertas" value="3 Puertas"><label for="3puertas">3 Puertas</label>
+      <input type="radio" id="5puertas" name="puertas" value="5 Puertas"><label for="5puertas">5 Puertas</label>
+      <input type="radio" id="4puertas" name="puertas" value="4 Puertas"><label for="4puertas">4 Puertas</label>
+      <input type="radio" id="2puertas" name="puertas" value="2 Puertas"><label for="2puertas">2 Puertas</label>
+    </div>
+
+    <div class="buttons">
+      <button type="button" onclick="validarSeleccion()">Enviar</button>
+      <button type="button" onclick="generarTextoIa()">Generar Texto</button>
+      <button type="button" onclick="enviarFormularioAPI()">Enviar a  la API</button>
+
+      
+    </div>
+
+    <div class="resultado" id="output" style="display:none;"></div>
+  </div>
+
+  <script>
+    function validarSeleccion() {
+      const names = ['motor','transmision','traccion','carroceria','puertas'];
+      for (let name of names) {
+        if (!document.querySelector(`input[name="${name}"]:checked`)) {
+          alert("Por favor selecciona todas las opciones.");
+          return false;
+        }
+      }
+      alert("¡Selección válida!");
+      return true;
+    }
+
+    function generarTextoIa() {
+      if (!validarSeleccion()) return;
+      const motor = document.querySelector('input[name="motor"]:checked').value;
+      const transmision = document.querySelector('input[name="transmision"]:checked').value;
+      const traccion = document.querySelector('input[name="traccion"]:checked').value;
+      const carroceria = document.querySelector('input[name="carroceria"]:checked').value;
+      const puertas = document.querySelector('input[name="puertas"]:checked').value;
+
+      const textoHTML = `
+        <strong>Motor:</strong> ${motor}<br>
+        <strong>Transmisión:</strong> ${transmision}<br>
+        <strong>Tracción:</strong> ${traccion}<br>
+        <strong>Carrocería:</strong> ${carroceria}<br>
+        <strong>Puertas:</strong> ${puertas}
+      `;
+
+      const output = document.getElementById('output');
+      output.innerHTML = textoHTML;
+      output.style.display = 'block';
+    }
+  
+
+  function generarTextoIa() {
+    if (!validarSeleccion()) return;
+    const motor = document.querySelector('input[name="motor"]:checked').value;
+    const transmision = document.querySelector('input[name="transmision"]:checked').value;
+    const traccion = document.querySelector('input[name="traccion"]:checked').value;
+    const carroceria = document.querySelector('input[name="carroceria"]:checked').value;
+    const puertas = document.querySelector('input[name="puertas"]:checked').value;
+
+    const textoHTML = `
+      
+      Quiero los 3 mejores coches que sean de motor  <strong>${motor}</strong>  transmision <strong> ${transmision}</strong> que tengan traccion 
+<strong>${traccion}</strong> ,  tipo de carroceria <strong> ${carroceria} </strong> y con <strong> ${puertas} </strong> puertas.
+
+    `;
+
+    const output = document.getElementById('output');
+    output.innerHTML = textoHTML;
+    output.style.display = 'block';
+  }
+
+  function enviarFormularioAPI() {
+    if (!validarSeleccion()) return;
+
+    const motor = document.querySelector('input[name="motor"]:checked').value;
+    const transmision = document.querySelector('input[name="transmision"]:checked').value;
+    const traccion = document.querySelector('input[name="traccion"]:checked').value;
+    const carroceria = document.querySelector('input[name="carroceria"]:checked').value;
+    const puertas = document.querySelector('input[name="puertas"]:checked').value;
+
+    const url = 'https://magicloops.dev/api/loop/b999efdb-8fef-416f-bca7-67afd9c7d706/run?';
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        motor,
+        transmision,
+        traccion,
+        carroceria,
+        puertas
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      const output = document.getElementById('output');
+      output.innerHTML = `<strong>Resultado IA:</strong><br>${data.resultado || JSON.stringify(data)}`;
+      output.style.display = 'block';
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert("Hubo un error al conectarse con la API.");
+    });
+  }
+
+    
+    
+  </script>
+</body>
+</html>
