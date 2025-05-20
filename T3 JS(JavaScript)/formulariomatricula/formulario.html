@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Matrícula</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --background-color: #f4f6f7;
+            --text-color: #2c3e50;
+            --error-color: #e74c3c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        input[type="number"], 
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="number"]:focus, 
+        input[type="text"]:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .subject-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 8px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+        }
+
+        .subject-group input[type="checkbox"] {
+            margin-right: 10px;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary-color);
+            border-radius: 4px;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .subject-group input[type="checkbox"]:checked {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            position: relative;
+        }
+
+        .subject-group input[type="checkbox"]:checked::after {
+            content: '✔';
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .subject-group label {
+            flex-grow: 1;
+            margin-bottom: 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #result {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f1f8ff;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .error {
+            color: var(--error-color);
+            text-align: center;
+            font-weight: bold;
+            background-color: #fff0f0;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 15px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Matrícula</h1>
+        
+        <form id="enrollmentForm">
+            <div class="form-group">
+                <label for="hours">Horas semanales:</label>
+                <input type="number" id="hours" min="1" required>
+            </div>
+            
+            <div class="form-group">
+                <div class="subject-group">
+                    <input type="checkbox" id="oldStudent">
+                    <label for="oldStudent">Soy antiguo alumno (35% de descuento)</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="subject-group">
+                    <input type="checkbox" id="scholarship">
+                    <label for="scholarship">Tengo beca (20% del total)</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <h3>Asignaturas de Primero:</h3>
+                <div class="subject-group">
+                    <input type="checkbox" id="math1" name="subject" value="Matemáticas I">
+                    <label for="math1">Matemáticas I</label>
+                </div>
+                <div class="subject-group">
+                    <input type="checkbox" id="history" name="subject" value="Historia">
+                    <label for="history">Historia</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <h3>Asignaturas de Segundo:</h3>
+                <div class="subject-group">
+                    <input type="checkbox" id="math2" name="subject" value="Matemáticas II">
+                    <label for="math2">Matemáticas II</label>
+                </div>
+                <div class="subject-group">
+                    <input type="checkbox" id="physics" name="subject" value="Física">
+                    <label for="physics">Física</label>
+                </div>
+            </div>
+            
+            <button type="button" onclick="calculatePrice()">Calcular Precio</button>
+        </form>
+        
+        <div id="result"></div>
+    </div>
+
+    <script>
+        // El script anterior se mantiene igual
+        function calculatePrice() {
+            const hours = parseInt(document.getElementById('hours').value);
+            const isOldStudent = document.getElementById('oldStudent').checked;
+            const hasScholarship = document.getElementById('scholarship').checked;
+            
+            const selectedSubjects = [];
+            document.querySelectorAll('input[name="subject"]:checked').forEach(subject => {
+                selectedSubjects.push(subject.value);
+            });
+            
+            const hasMath2 = selectedSubjects.includes('Matemáticas II');
+            const hasMath1 = selectedSubjects.includes('Matemáticas I');
+            
+            if (hasMath2 && !hasMath1) {
+                document.getElementById('result').innerHTML = 
+                    '<p class="error">Error: No puedes matricularte en Matemáticas II sin Matemáticas I</p>';
+                
+                    
+                return;
+            }
+            
+            const basePrice = hours * 20;
+            
+            let finalPrice = isOldStudent ? basePrice * 0.65 : basePrice;
+            
+            let scholarshipPrice = hasScholarship ? finalPrice * 0.2 : finalPrice;
+            
+            let resultHTML = `
+                <p><strong>Asignaturas seleccionadas:</strong> ${selectedSubjects.join(', ') || 'Ninguna'}</p>
+                <p><strong>Horas semanales:</strong> ${hours}</p>
+                <p><strong>Precio base:</strong> ${basePrice}€</p>
+            `;
+            
+            if (isOldStudent) {
+                resultHTML += `<p><strong>Descuento antiguo alumno (35%):</strong> ${basePrice * 0.35}€</p>`;
+            }
+            
+            resultHTML += `
+                <p><strong>Total:</strong> ${finalPrice.toFixed(2)}€</p>
+            `;
+            
+            if (hasScholarship) {
+                resultHTML += `
+                    <p><strong>Descuento beca (80%):</strong> ${(finalPrice * 0.8).toFixed(2)}€</p>
+                    <p><strong>Total con beca:</strong> ${scholarshipPrice.toFixed(2)}€</p>
+                `;
+            }
+            
+            document.getElementById('result').innerHTML = resultHTML;
+        }
+    </script>
+</body>
+</html>
