@@ -7,41 +7,51 @@
 </head>
 <body>
     <script>
-        let nota;
         const totalPreguntas = 27;
-        
-//Si hacerto 27 preguntas , es un 10 pero solo se mile nota 
-nota = prompt("Que nota sacaste?");
-if (nota>0 && nota <=27){
-    let preguntasAcertadas = (nota *27) / 10;
-    preguntasAcertadas = preguntasAcertadas.toFixed(0);
-    alert("Las pregutas correctas son: " + preguntasAcertadas);
-    let preguntasIncorrectas = totalPreguntas - preguntasAcertadas;
-    preguntasIncorrectas = preguntasIncorrectas.toFixed(0);
-    alert("Las preguntas incorrectas son: " + preguntasIncorrectas);
-    horas = prompt("Cuantas horas has tardado en hacer esta script?");
-    horas = parseFloat(horas);
-    switch(horas){
-        case 1:
-            alert("Has tardado una hora, eres un crack");
-            alert("Tu nota es " + nota + " y has acertado " + preguntasAcertadas + " preguntas");
-            break;
-        case 12:
-            alert("Has tardado 12 hora en hacer esto por ello te quito 0,1 puntos por cada fallo ");
-            nota = nota - (preguntasIncorrectas * 0.1);
-            alert("Tu nota es " + nota + " y has acertado " + preguntasAcertadas + " preguntas");
-            break;
-        case 24:
-            alert("Has tardado 24 horas en hacer esto por ello te quito 0,2 puntos por cada fallo ");
-            nota = nota - (preguntasIncorrectas * 0.2);
-            alert("Tu nota es " + nota + " y has acertado " + preguntasAcertadas + " preguntas");
-            break;
-        case null:
-            alert("No lo has hecho por ello te quito 0,3 por cada fallo ");
-            nota = nota - (preguntasIncorrectas * 0.3);
-            alert("Tu nota es " + nota + " y has acertado " + preguntasAcertadas + " preguntas");
-            break;
-    }
 
+        // Ahora primero preguntamos las preguntas correctas
+        let preguntasAcertadas = prompt("¿Cuántas preguntas has acertado? (de 0 a 27)");
+        preguntasAcertadas = parseInt(preguntasAcertadas);
 
-}
+        if (preguntasAcertadas >= 0 && preguntasAcertadas <= totalPreguntas) {
+            // Calculamos la nota real
+            let nota = (preguntasAcertadas * 10) / totalPreguntas;
+            nota = nota.toFixed(2);
+
+            alert("Tu nota inicial es: " + nota);
+
+            let preguntasIncorrectas = totalPreguntas - preguntasAcertadas;
+            alert("Las preguntas incorrectas son: " + preguntasIncorrectas);
+
+            let horas = prompt("¿Cuántas horas has tardado en hacer este script?");
+            horas = parseFloat(horas);
+
+            switch (horas) {
+                case 1:
+                    alert("Has tardado una hora, eres un crack");
+                    alert("Tu nota es " + nota + " y has acertado " + preguntasAcertadas + " preguntas");
+                    break;
+                case 12:
+                    alert("Has tardado 12 horas en hacer esto, por ello te quito 0,1 puntos por cada fallo");
+                    nota = (nota - (preguntasIncorrectas * 0.1)).toFixed(2);
+                    alert("Tu nota es " + nota + " y has acertado " + preguntasAcertadas + " preguntas");
+                    break;
+                case 24:
+                    alert("Has tardado 24 horas en hacer esto, por ello te quito 0,2 puntos por cada fallo");
+                    nota = (nota - (preguntasIncorrectas * 0.2)).toFixed(2);
+                    alert("Tu nota es " + nota + " y has acertado " + preguntasAcertadas + " preguntas");
+                    break;
+                case null:
+                    alert("No lo has hecho, por ello te quito 0,3 por cada fallo");
+                    nota = (nota - (preguntasIncorrectas * 0.3)).toFixed(2);
+                    alert("Tu nota es " + nota + " y has acertado " + preguntasAcertadas + " preguntas");
+                    break;
+                default:
+                    alert("Tu nota final es " + nota + " y has acertado " + preguntasAcertadas + " preguntas");
+            }
+        } else {
+            alert("Número de preguntas acertadas no válido.");
+        }
+    </script>
+</body>
+</html>
